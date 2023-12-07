@@ -19,12 +19,12 @@ li {
   margin: 0;
   padding: 0;
   font-family: "Arimo", sans-serif !important;
-  overflow-x: hidden;
 }
 
 body {
   font-family: "Arial", sans-serif; /* Set a default font */
   line-height: 1.6; /* Adjust line height for better readability */
+  overflow-x: hidden;
 }
 
 .main-wrap {
@@ -132,7 +132,6 @@ body {
   padding: 20px;
   border-radius: 5px;
   flex-wrap: wrap;
-
 }
 
 .single-card-item-text-wrap {
@@ -209,11 +208,17 @@ body {
   color: #1b1c4d;
 }
 
+@media screen and (max-width: 1100px) {
+  .line-img {
+    display: none;
+  }
+}
 @media screen and (max-width: 900px) {
   .table-wrap {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
+
   .single-card-item-text-wrap-chip-wrap {
     width: 100px;
     flex-direction: column;
