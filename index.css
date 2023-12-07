@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Roboto:wght@300;400&family=Tilt+Neon&display=swap");
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-family: "Arimo", sans-serif !important;
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Set a default font */
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.main-wrap {
+  background-color: #1b1c4d14;
+  min-height: 506px;
+  padding: 32px;
+}
+
+.navbar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-main-wrap {
+  margin-top: 152px;
+  font-family: Sharp Grotesk Medium;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1b1c4d;
+}
+
+.table-wrap {
+  position: relative;
+  width: Fixed (1, 280px);
+  min-height: 310px;
+  top: 70px;
+  padding: 25px 72px 25px 72px;
+  border-radius: 4px;
+  border: 1.5pxl;
+  background-color: white;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.single-table-item-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.single-table-item-wrap h2 {
+  font-family: "Arimo", sans-serif !important;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1b1c4d;
+}
+
+.single-table-item-wrap p {
+  font-family: "Arimo", sans-serif !important;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1b1c4d;
+}
+
+.cards-items-main-wrap {
+  margin-top: 100px;
+  background-color: white;
+  padding: 32px;
+}
+
+.cards-item-wrap {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.single-card-item {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.single-card-item-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.single-card-item-text-wrap-chip {
+  top: 775px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 16px;
+  gap: 8px;
+  display: flex;
+  background-color: #1b1c4d14;
+}
+
+.single-card-item-text-wrap-chip-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.single-card-item-text-wrap h1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1b1c4d;
+}
+
+.single-card-item-text-wrap-chip p {
+  font-family: Arimo;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1b1c4d;
+}
+
+.single-card-item-price-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.single-card-item-price-wrap h1 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1b1c4d;
+}
+.single-card-item-price {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.single-card-item-price p {
+  font-family: Arimo;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1b1c4d;
+}
+
+@media screen and (max-width: 900px) {
+  .table-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .table-wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
