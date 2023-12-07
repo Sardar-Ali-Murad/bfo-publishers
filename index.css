@@ -19,6 +19,7 @@ li {
   margin: 0;
   padding: 0;
   font-family: "Arimo", sans-serif !important;
+  overflow-x: hidden;
 }
 
 body {
@@ -131,6 +132,7 @@ body {
   padding: 20px;
   border-radius: 5px;
   flex-wrap: wrap;
+
 }
 
 .single-card-item-text-wrap {
@@ -153,6 +155,7 @@ body {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  width: 550px !important;
 }
 
 .single-card-item-text-wrap h1 {
@@ -210,6 +213,11 @@ body {
   .table-wrap {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+  .single-card-item-text-wrap-chip-wrap {
+    width: 100px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media screen and (max-width: 600px) {
