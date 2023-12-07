@@ -28,14 +28,13 @@ body {
 
 .main-wrap {
   background-color: #1b1c4d14;
-  min-height: 506px;
+  min-height: 370px;
   padding: 32px;
 }
 
-.line-img{
+.line-img {
   position: absolute;
   left: 50%;
-
 }
 
 .navbar-wrap {
@@ -49,7 +48,7 @@ body {
 }
 
 .table-main-wrap {
-  margin-top: 152px;
+  margin-top: 100px;
   font-family: Sharp Grotesk Medium;
   font-size: 32px;
   font-weight: 500;
@@ -63,7 +62,7 @@ body {
   position: relative;
   width: Fixed (1, 280px);
   min-height: 310px;
-  top: 70px;
+  top: 60px;
   padding: 25px 72px 25px 72px;
   border-radius: 4px;
   border: 1.5pxl;
@@ -104,6 +103,16 @@ body {
   margin-top: 100px;
   background-color: white;
   padding: 32px;
+}
+
+.card-head {
+  font-family: "Sharp Grotesk", sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 500 !important;
+  line-height: 48px !important;
+  letter-spacing: 0em !important;
+  text-align: left !important;
+  font-weight: bolder !important;
 }
 
 .cards-item-wrap {
@@ -179,6 +188,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: #1b1c4d;
+  font-weight: bolder !important;
 }
 .single-card-item-price {
   display: flex;
