@@ -8,6 +8,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 html,
 body,
 h1,
@@ -19,17 +20,18 @@ li {
   margin: 0;
   padding: 0;
   font-family: "Arimo", sans-serif !important;
+  overflow-x: hidden !important;
 }
 
 body {
-  font-family: "Arial", sans-serif; 
-  line-height: 1.6; /* Adjust line height for better readability */
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
 .main-wrap {
   background-color: #1b1c4d14;
-  height: 534px;
+  height: 520px;
   padding: 32px;
 }
 
@@ -39,12 +41,9 @@ body {
 }
 
 .navbar-wrap {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.nav-icon-2 {
-  float: right;
 }
 
 .table-wrap {
@@ -53,6 +52,7 @@ body {
 
 .table-main-wrap {
   margin-top: 100px;
+  font-family: Sharp Grotesk Medium;
   font-size: 32px;
   font-weight: 500;
   line-height: 48px;
@@ -65,33 +65,29 @@ body {
   position: relative;
   width: Fixed (1, 280px);
   min-height: 310px;
-  top: 13px;
+  top: 10px;
   padding: 25px 72px 25px 72px;
   border-radius: 4px;
   border: 1.5pxl;
   background-color: white;
   margin-top: 40px;
-
-  width: 88%; /* You can adjust this as needed */
-}
-
-/* Each column takes 25% of the container width */
-.single-table-item-wrap {
-  width: 24%;
-  float: left;
-  box-sizing: border-box;
-  margin-right: 10px;
-  margin-bottom: 52px !important;
-}
-
-/* Clear the float to prevent layout issues */
-.single-table-item-wrap :last-child {
-  margin-right: 0;
-  clear: right;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
 }
 
 .single-table-item-wrap {
-  margin-bottom: 8px;
+  flex: 1 0 calc(25% - 10px) !important;
+}
+
+.table-wrap > * {
+  flex: 1;
+}
+
+.single-table-item-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .single-table-item-wrap h2 {
@@ -132,82 +128,43 @@ body {
 
 .cards-item-wrap {
   margin-top: 40px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .single-card-item {
   background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 20px;
   border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.single-card-item::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.single-card-item > div {
-  float: left;
-  width: 24%;
-}
-
-.single-card-item > div:first-child {
-  margin-right: 4%; /* Adjust as needed to leave some gap between items */
+  flex-wrap: wrap;
 }
 
 .single-card-item-text-wrap {
-  overflow: hidden; /* Clear float containment */
-}
-
-.single-card-item-text-wrap > div {
-  float: left;
-  width: 100%;
-  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .single-card-item-text-wrap-chip {
   top: 775px;
-  overflow: hidden; /* Clear float containment */
-}
-
-.single-card-item-text-wrap-chip > span {
-  float: left;
-  padding: 4px 10px;
+  padding: 4px 10px 4px 10px;
   border-radius: 16px;
-  margin-right: 8px; /* Adjust as needed to create the gap between elements */
+  gap: 8px;
+  display: flex;
   background-color: #1b1c4d14;
-    font-family: "Arimo", sans-serif !important;
-
 }
 
 .single-card-item-text-wrap-chip-wrap {
-  overflow: hidden; /* Clear float containment */
-}
-
-.single-card-item-text-wrap-chip-wrap > div {
-  float: left;
-  margin-bottom: 10px;
-  background: lightgray;
-  margin-left: 2px;
-  padding: 2px 10px;
-  border-radius: 15px;
-}
-
-
-.single-card-item-text-wrap-chip-wrap::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.single-card-item-text-wrap-chip-wrap > span {
-  float: left;
-  margin-right: 10px; /* Adjust as needed to create the gap between elements */
-  font-family: "Arimo", sans-serif !important;
-
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 550px !important;
 }
 
 .single-card-item-text-wrap h1 {
@@ -217,8 +174,6 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: #1b1c4d;
-  font-family: "Arimo", sans-serif !important;
-
 }
 
 .single-card-item-text-wrap-chip p {
@@ -232,19 +187,10 @@ body {
 }
 
 .single-card-item-price-wrap {
-  overflow: hidden; /* Clear float containment */
-}
-
-.single-card-item-price-wrap > div {
-  float: left;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.single-card-item-price-wrap::after {
-  content: "";
-  display: table;
-  clear: both;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .single-card-item-price-wrap h1 {
@@ -252,65 +198,64 @@ body {
   font-weight: 500;
   line-height: 25px;
   letter-spacing: 0em;
-  text-align: right;
+  text-align: left;
   color: #1b1c4d;
   font-weight: bolder !important;
-  font-family: "Arimo", sans-serif !important;
-
 }
-
 .single-card-item-price {
-  overflow: hidden; /* Clear float containment */
-  margin-top: 20px;
-}
-
-.single-card-item-price > span {
-  float: left;
-  margin-bottom: 5px;
-  font-family: "Arimo", sans-serif !important;
-
-}
-
-.single-card-item-price::after {
-  content: "";
-  display: table;
-  clear: both;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .single-card-item-price p {
+  font-family: Arimo;
   font-size: 13px;
   font-weight: 400;
   line-height: 15px;
   letter-spacing: 0em;
-  text-align: right;
+  text-align: left;
   color: #1b1c4d;
-  font-family: "Arimo", sans-serif !important;
-
 }
 
+@media screen and (max-width: 1200px) {
+  .line-img {
+    display: none;
+  }
+  .single-table-item-wrap {
+    flex: 1 0 calc(50% - 30px) !important;
+    gap: 30px !important;
+  }
+  .main-wrap {
+    height: auto !important;
+  }
+}
 @media screen and (max-width: 1100px) {
   .line-img {
     display: none;
   }
+  .single-table-item-wrap {
+    flex: 1 0 calc(50% - 40px) !important;
+    gap: 40px !important;
+  }
 }
 @media screen and (max-width: 900px) {
-  .table-wrap {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-  .main-wrap{
-    height: auto;
-  }
-
   .single-card-item-text-wrap-chip-wrap {
     width: 100px;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .single-card-item {
+    gap: 30px !important;
   }
 }
 @media screen and (max-width: 600px) {
   .table-wrap {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .single-table-item-wrap {
+    flex: 1 0 calc(100% - 50px) !important;
+    gap: 50px !important;
   }
 }
