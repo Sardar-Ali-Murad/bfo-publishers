@@ -257,10 +257,6 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  .table-wrap {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
   .single-table-item-wrap {
     flex: 1 0 calc(100% - 50px) !important;
     gap: 50px !important;
