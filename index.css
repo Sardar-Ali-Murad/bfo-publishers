@@ -355,7 +355,7 @@ body {
 @media screen and (max-width: 992px) {
   .single-card-item > div {
     float: left;
-    width: 59%;
+    width: 60%;
   }
   .single-card-item-price-wrap {
     margin-left: 266px;
