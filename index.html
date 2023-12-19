@@ -3,15 +3,436 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Arimo&family=Roboto:wght@300;400&family=Tilt+Neon&display=swap"
+    />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        font-family: "Arimo", sans-serif !important;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .main-wrap {
+        background-color: #1b1c4d14;
+        height: 646px;
+        padding: 32px;
+      }
+
+      .line-img {
+        position: absolute;
+        left: 50%;
+      }
+
+      .navbar-wrap {
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-icon-2 {
+        float: right;
+      }
+
+      .table-wrap {
+        border: 2px solid lightgray;
+      }
+
+      .table-main-wrap {
+        margin-top: 100px;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .table-wrap {
+        position: relative;
+        width: Fixed (1, 280px);
+        min-height: 400px;
+        top: 13px;
+        padding: 25px 72px 25px 72px;
+        border-radius: 4px;
+        border: 1.5pxl;
+        background-color: white;
+        margin-top: 40px;
+        width: 100%;
+      }
+
+      .single-table-item-wrap {
+        width: 31%;
+        float: left;
+        box-sizing: border-box;
+        margin-right: 10px;
+        margin-bottom: 52px !important;
+      }
+
+      .single-table-item-wrap :last-child {
+        margin-right: 0;
+        clear: right;
+      }
+
+      .single-table-item-wrap {
+        margin-bottom: 8px;
+      }
+
+      .single-table-item-wrap h2 {
+        font-family: "Arimo", sans-serif !important;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .single-table-item-wrap p {
+        font-family: "Arimo", sans-serif !important;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .cards-items-main-wrap {
+        margin-top: 60px;
+        background-color: white;
+        padding: 32px;
+      }
+
+      .card-head {
+        font-family: "Sharp Grotesk", sans-serif !important;
+        font-size: 32px !important;
+        font-weight: 500 !important;
+        line-height: 48px !important;
+        letter-spacing: 0em !important;
+        text-align: left !important;
+        font-weight: bolder !important;
+      }
+
+      .cards-item-wrap {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+      .single-card-item {
+        background-color: #ffffff;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .single-card-item::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .single-card-item > div {
+        float: left;
+        width: 24%;
+      }
+
+      .single-card-item > div:first-child {
+        margin-right: 4%;
+      }
+
+      .single-card-item-text-wrap {
+        width: 100%;
+      }
+
+      .single-card-item-text-wrap > div {
+        float: left;
+        margin-bottom: 8px;
+      }
+      .single-card-item-text-wrap > p :nth-child(2) {
+        float: right;
+        width: 100%;
+        margin-bottom: 8px;
+      }
+
+      .single-card-item-text-wrap-chip {
+        top: 775px;
+      }
+
+      .single-card-item-text-wrap-chip > span {
+        float: left;
+        padding: 4px 10px;
+        border-radius: 16px;
+        margin-right: 8px;
+        background-color: #1b1c4d14;
+        font-family: "Arimo", sans-serif !important;
+      }
+      .single-card-item-text-wrap-chip-wrap {
+        margin-left: -2px;
+      }
+
+      .single-card-item-text-wrap-chip-wrap > div {
+        float: left;
+        margin-bottom: 10px;
+        background: #1b1c4d14;
+        padding: 2px 10px;
+        border-radius: 15px;
+        margin-left: 4px;
+      }
+
+      .single-card-item-price-wrap {
+        margin-top: -40px;
+        margin-left: 80px;
+      }
+
+      .single-card-item-text-wrap {
+        width: 34% !important;
+      }
+
+      .single-card-item h1 {
+        margin-bottom: 10px;
+      }
+
+      .single-card-item-text-wrap-chip-wrap::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .single-card-item-text-wrap-chip-wrap > span {
+        float: left;
+        margin-right: 10px;
+        font-family: "Arimo", sans-serif !important;
+      }
+
+      .single-card-item-text-wrap h1 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+        font-family: "Arimo", sans-serif !important;
+        margin-left: 10px;
+      }
+
+      .single-card-item-text-wrap-chip p {
+        font-family: Arimo;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .single-card-item-price-wrap > div {
+        float: left;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .single-card-item-price-wrap::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .single-card-item-price-wrap h1 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #1b1c4d;
+        font-weight: bolder !important;
+        font-family: "Arimo", sans-serif !important;
+      }
+
+      .single-card-item-price {
+        margin-top: 20px;
+      }
+
+      .single-card-item-price > span {
+        float: left;
+        margin-bottom: 5px;
+        font-family: "Arimo", sans-serif !important;
+      }
+
+      .single-card-item-price::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .single-card-item-price p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #1b1c4d;
+        font-family: "Arimo", sans-serif !important;
+      }
+
+      .plus {
+        position: relative;
+        margin-left: 181px;
+        margin-top: -14px;
+      }
+
+      @media screen and (max-width: 1100px) {
+        .line-img {
+          display: none;
+        }
+        .table-wrap {
+          width: 100%;
+          height: 400px;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        .single-table-item-wrap {
+          width: 30%;
+          float: left;
+          box-sizing: border-box;
+          margin-right: 10px;
+          margin-bottom: 52px !important;
+        }
+        .table-wrap {
+          width: 100%;
+        }
+        .cards-items-main-wrap {
+          margin-top: 140px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .table-wrap {
+          gap: 30px;
+        }
+        .main-wrap {
+          height: auto;
+        }
+
+        .single-card-item-text-wrap-chip-wrap {
+          width: 100px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .table-wrap {
+          width: 100% !important;
+        }
+        .cards-items-main-wrap {
+          margin-top: 50px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .table-wrap {
+          gap: 30px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .table-wrap {
+          width: 100%;
+          height: 620px;
+        }
+        .single-table-item-wrap {
+          width: 30%;
+          float: left;
+          box-sizing: border-box;
+          margin-right: 10px;
+          margin-bottom: 52px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .single-table-item-wrap {
+          width: 46%;
+          float: left;
+          box-sizing: border-box;
+          margin-right: 10px;
+          margin-bottom: 52px;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        .table-wrap {
+          width: 76%;
+          height: 1100px;
+        }
+        .single-table-item-wrap {
+          width: 52%;
+          float: left;
+          box-sizing: border-box;
+          margin-right: 10px;
+          margin-bottom: 52px;
+        }
+      }
+      @media screen and (max-width: 570px) {
+        .table-wrap {
+          width: 100%;
+          height: 1150px;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .single-card-item > div {
+          float: left;
+          width: 60%;
+        }
+        .single-card-item-price-wrap {
+          margin-left: 266px;
+          margin-top: -38px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .single-card-item-text-wrap-chip {
+          width: 226px !important;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        .single-card-item > div {
+          float: left;
+          width: 100%;
+        }
+        .single-card-item-price-wrap {
+          margin-left: 0px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <img src="./assets//line.svg" class="line-img" />
+    <img src="sxs" class="line-img" />
     <div class="main-wrap">
       <div class="navbar-wrap">
-        <img src="./assets/logo-start.svg" alt="logo-start" />
-        <img src="./assets/logo-end.svg" alt="log-end" class="nav-icon-2" />
+        <img
+          src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qdzreshbzryfldfsdyw.jpg"
+          alt="log-start"
+          class="nav-icon-1"
+        />
+        <img
+          src="https://res.cloudinary.com/dkbngxj51/image/upload/c_crop,g_auto,h_800,w_800/home-page/eeopakjtdji28yb7xw7.jpg"
+          alt="log-end"
+          class="nav-icon-2"
+        />
       </div>
       <div class="table-main-wrap">
         <h1 class="card-head">Risikoleben</h1>
@@ -64,7 +485,10 @@
       <div class="cards-item-wrap">
         <div class="single-card-item">
           <div>
-            <img src="./assets//item1.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
+              alt="img-1"
+            />
           </div>
 
           <div class="single-card-item-text-wrap">
@@ -73,16 +497,25 @@
             </div>
             <div class="single-card-item-text-wrap-chip-wrap">
               <div class="single-card-item-text-wrap-chip">
-                <p>BUZ Beitragsbefreiung 3,00 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  BUZ Beitragsbefreiung 3,00 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
-                <p>Unfalltodesfallschutz 10,66 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Unfalltodesfallschutz 10,66 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
             </div>
           </div>
           <div>
-            <img src="./assets/item3.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-2"
+            />
           </div>
           <div class="single-card-item-price-wrap">
             <h1>21,68 €</h1>
@@ -94,7 +527,10 @@
         </div>
         <div class="single-card-item">
           <div>
-            <img src="./assets//item4.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qby0pjogqlkksb5klzdo.jpg"
+              alt="img-3"
+            />
           </div>
           <div class="single-card-item-text-wrap">
             <div>
@@ -102,16 +538,25 @@
             </div>
             <div class="single-card-item-text-wrap-chip-wrap">
               <div class="single-card-item-text-wrap-chip">
-                <p>BUZ Beitragsbefreiung 2,59 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  BUZ Beitragsbefreiung 2,59 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
-                <p>Premium Risikoleben 9,59 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Premium Risikoleben 9,59 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
             </div>
           </div>
           <div>
-            <img src="./assets/item3.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-4"
+            />
           </div>
           <div class="single-card-item-price-wrap">
             <h1>32,00 €</h1>
@@ -123,7 +568,10 @@
         </div>
         <div class="single-card-item">
           <div>
-            <img src="./assets//item2.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
+              alt="img-4"
+            />
           </div>
           <div class="single-card-item-text-wrap">
             <div>
@@ -131,11 +579,16 @@
             </div>
             <div class="single-card-item-text-wrap-chip-wrap">
               <div class="single-card-item-text-wrap-chip">
-                <p>Zusatzschutz Krebs Plus 6,19 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Zusatzschutz Krebs Plus 6,19 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
-                <p>Premium E-RLP 4,22 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Premium E-RLP 4,22 € <span style="margin-left: 5px">+</span>
+                </p>
               </div>
               <div class="single-card-item-text-wrap-chip">
                 <p>+ 3</p>
@@ -143,7 +596,10 @@
             </div>
           </div>
           <div>
-            <img src="./assets/item3.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-5"
+            />
           </div>
           <div class="single-card-item-price-wrap">
             <h1>14,08 €</h1>
@@ -155,7 +611,10 @@
         </div>
         <div class="single-card-item">
           <div>
-            <img src="./assets//item6.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/iynppbxopsd5uyuuhby6.jpg"
+              alt="img-6"
+            />
           </div>
           <div class="single-card-item-text-wrap">
             <div>
@@ -163,11 +622,17 @@
             </div>
             <div class="single-card-item-text-wrap-chip-wrap">
               <div class="single-card-item-text-wrap-chip">
-                <p>BUZ Beitragsbefreiung 1,96 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  BUZ Beitragsbefreiung 1,96 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
-                <p>Risikoversicherung T1 - Plus 4,96€ <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Risikoversicherung T1 - Plus 4,96€
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
@@ -176,7 +641,10 @@
             </div>
           </div>
           <div>
-            <img src="./assets/item3.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-7"
+            />
           </div>
           <div class="single-card-item-price-wrap">
             <h1>13,99 €</h1>
@@ -188,7 +656,10 @@
         </div>
         <div class="single-card-item">
           <div>
-            <img src="./assets//item5.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/rgrhgfwefqpwmpg5j5at.jpg"
+              alt="img-8"
+            />
           </div>
           <div class="single-card-item-text-wrap">
             <div>
@@ -196,11 +667,17 @@
             </div>
             <div class="single-card-item-text-wrap-chip-wrap">
               <div class="single-card-item-text-wrap-chip">
-                <p>Unfallzusatzversicherung 10,30 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Unfallzusatzversicherung 10,30 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
-                <p>Dread Disease Einmalleistung 32,11 <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Dread Disease Einmalleistung 32,11
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
               <div class="single-card-item-text-wrap-chip">
                 <p>+ 1</p>
@@ -208,7 +685,10 @@
             </div>
           </div>
           <div>
-            <img src="./assets/item3.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-9"
+            />
           </div>
           <div class="single-card-item-price-wrap">
             <h1>18,34 €</h1>
@@ -220,7 +700,10 @@
         </div>
         <div class="single-card-item">
           <div>
-            <img src="./assets//item2.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
+              alt="img-10"
+            />
           </div>
           <div class="single-card-item-text-wrap">
             <div>
@@ -228,11 +711,16 @@
             </div>
             <div class="single-card-item-text-wrap-chip-wrap">
               <div class="single-card-item-text-wrap-chip">
-                <p>Zusatzschutz Krebs Plus 6,19 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Zusatzschutz Krebs Plus 6,19 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
-                <p>Premium E-RLP 4,22 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Premium E-RLP 4,22 € <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
@@ -241,7 +729,10 @@
             </div>
           </div>
           <div>
-            <img src="./assets/item3.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-11"
+            />
           </div>
           <div class="single-card-item-price-wrap">
             <h1>14,08 €</h1>
@@ -253,7 +744,9 @@
         </div>
         <div class="single-card-item">
           <div>
-            <img src="./assets//item6.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/iynppbxopsd5uyuuhby6.jpg"
+            />
           </div>
           <div class="single-card-item-text-wrap">
             <div>
@@ -261,11 +754,17 @@
             </div>
             <div class="single-card-item-text-wrap-chip-wrap">
               <div class="single-card-item-text-wrap-chip">
-                <p>BUZ Beitragsbefreiung 1,96 € <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  BUZ Beitragsbefreiung 1,96 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
 
               <div class="single-card-item-text-wrap-chip">
-                <p>Risikoversicherung T1 - Plus 4,96€ <span style="margin-left: 5px;">+</span></p>
+                <p>
+                  Risikoversicherung T1 - Plus 4,96€
+                  <span style="margin-left: 5px">+</span>
+                </p>
               </div>
               <div class="single-card-item-text-wrap-chip">
                 <p>+ 1</p>
@@ -273,7 +772,10 @@
             </div>
           </div>
           <div>
-            <img src="./assets/item3.svg" />
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-13"
+            />
           </div>
           <div class="single-card-item-price-wrap">
             <h1>13,99 €</h1>
