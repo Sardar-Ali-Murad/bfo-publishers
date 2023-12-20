@@ -64,7 +64,6 @@
         font-weight: 400;
         line-height: 36px;
         letter-spacing: 0em;
-        text-align: left;
         color: #1b1c4d;
       }
 
@@ -93,9 +92,10 @@
       }
 
       .page-1-left-overlay {
-        float: right;
         margin-top: 120px;
         margin-right: 80px;
+        width: 90%;
+        text-align: right;
       }
 
       .page-1-heading3 {
@@ -144,13 +144,10 @@
 
       /* Page 2 Starts */
       .home-page-2-layout {
-        margin-top: 900px;
+        margin-top: 100px;
       }
 
       .home-page-2-grey-box-wrap {
-        height: 361px;
-        top: 250px;
-        left: 1440px;
         background-color: #1b1c4d14;
         padding: 72px 77px;
       }
@@ -347,6 +344,8 @@
 
       .page-2-box-overlay {
         margin-top: 120px;
+        margin-left: 80px;
+        margin-right: 80px;
       }
 
       .page-2-heading3 {
@@ -520,7 +519,7 @@
 
       /* Page 3 Start */
       .home-page-3-layout {
-        margin-top: 1200px;
+        margin-top: 100px;
         margin-left: 80px;
       }
 
@@ -536,7 +535,7 @@
 
       .horizontal-line {
         background-color: #1b1c4d33;
-        width: 213%;
+        width: 115%;
         height: 1px;
         margin-top: 24px;
         margin-bottom: 30px;
@@ -560,13 +559,9 @@
       }
 
       .page-3-single-left-overlay {
-        float: left;
+        width: 80%;
       }
 
-      .page-3-single-right-overlay {
-        float: right;
-        margin-right: 80px;
-      }
       .page-3-heading2 {
         font-family: Arimo;
         font-size: 22px;
@@ -582,6 +577,89 @@
       }
 
       /* Page 3 Ends */
+      /* Page 4 Starts */
+      .home-page-4-layout {
+        margin: 120px 80px;
+      }
+
+      .page-4-heading1 {
+        font-family: Sharp Grotesk Medium;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .single-card-item-overlay {
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+      }
+
+      .single-card-item-overlay {
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+      }
+
+      .single-card-item-overlay::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .single-card-item-overlay > div {
+        float: left;
+        width: 24%;
+      }
+
+      .single-card-item-overlay > div:first-child {
+        margin-right: 4%;
+      }
+
+      .single-card-item-overlay h1 {
+        margin-bottom: 10px;
+      }
+
+      .page-4-flex-single-overlay-header {
+        font-family: Sharp Grotesk Medium;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .page-4-flex-single-overlay-subtitle {
+        font-family: Arimo;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .bold-horizontal-line {
+        background-color: #d9d9d9;
+        height: 8px;
+        width: 100%;
+      }
+
+      .page-4-box-overlay-wrap {
+        margin-top: 127px;
+      }
+      /* Page 4 Ends */
+
+      /* Page 6 Starts */
+      .home-page-6-overlay {
+        margin: 0px 80px;
+      }
+      /* Page 6 Ends */
     </style>
   </head>
   <body>
@@ -634,6 +712,7 @@
     </div>
     <!-- Page 1 End -->
     <!-- Page 2 Start-->
+
     <div class="home-page-2-layout">
       <div class="home-page-2-header-layout">
         <h1 class="page-2-heading1">Wünsche & Bedürfnisse</h1>
@@ -691,69 +770,71 @@
             </div>
           </div>
         </div>
-
-        <div class="page-2-box-overlay">
-          <div>
-            <h1 class="page-2-heading3">Folgende Grunddaten wurden erfasst</h1>
-            <div class="page-2-main-box-overlay">
-              <div class="page-2-flex-wrap">
-                <h1>Geboren</h1>
-                <p>15.06.1987</p>
-              </div>
-              <div class="page-2-flex-wrap">
-                <h1>Versicherungsbeginn</h1>
-                <p>01.12.2023</p>
-              </div>
-              <div class="page-2-flex-wrap">
-                <h1>Dauer in Jahren</h1>
-                <p>30 Jahre</p>
-              </div>
-              <div class="page-2-flex-wrap">
-                <h1>Beitrag</h1>
-                <p>21,68 €</p>
-              </div>
-              <div class="page-2-flex-wrap">
-                <h1>Überschussverwendung</h1>
-                <p>---</p>
-              </div>
+      </div>
+      <div class="page-2-box-overlay">
+        <div>
+          <h1 class="page-2-heading3">Folgende Grunddaten wurden erfasst</h1>
+          <div class="page-2-main-box-overlay">
+            <div class="page-2-flex-wrap">
+              <h1>Geboren</h1>
+              <p>15.06.1987</p>
+            </div>
+            <div class="page-2-flex-wrap">
+              <h1>Versicherungsbeginn</h1>
+              <p>01.12.2023</p>
+            </div>
+            <div class="page-2-flex-wrap">
+              <h1>Dauer in Jahren</h1>
+              <p>30 Jahre</p>
+            </div>
+            <div class="page-2-flex-wrap">
+              <h1>Beitrag</h1>
+              <p>21,68 €</p>
+            </div>
+            <div class="page-2-flex-wrap">
+              <h1>Überschussverwendung</h1>
+              <p>---</p>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="page-2-box-overlay">
-          <div>
-            <h1 class="page-2-heading3">Angaben zu Beruf und Risiken</h1>
-            <div class="page-2-main-box-overlay">
-              <div class="page-2-flex-wrap">
-                <h1>Beschäftigungsverhältnis</h1>
-                <p>angestellt</p>
-              </div>
-              <div class="page-2-flex-wrap">
-                <h1>Beruf/ausgeübte Tätigkeit</h1>
-                <p>Tischler</p>
-              </div>
-              <div class="page-2-flex-wrap">
-                <h1>Höchster Bildungsabschluss</h1>
-                <p>Abitur</p>
-              </div>
+      <div class="page-2-box-overlay">
+        <div>
+          <h1 class="page-2-heading3">Angaben zu Beruf und Risiken</h1>
+          <div class="page-2-main-box-overlay">
+            <div class="page-2-flex-wrap">
+              <h1>Beschäftigungsverhältnis</h1>
+              <p>angestellt</p>
+            </div>
+            <div class="page-2-flex-wrap">
+              <h1>Beruf/ausgeübte Tätigkeit</h1>
+              <p>Tischler</p>
+            </div>
+            <div class="page-2-flex-wrap">
+              <h1>Höchster Bildungsabschluss</h1>
+              <p>Abitur</p>
+            </div>
 
-              <div class="page-2-flex-wrap">
-                <p>---</p>
-              </div>
+            <div class="page-2-flex-wrap">
+              <p>---</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- Page 2 Ends-->
     <!-- Page 3 Start-->
+
     <div class="home-page-3-layout">
       <div>
         <h1 class="page-3-heading1">
           Folgende Leistungsinhalte wurden gewünscht
         </h1>
       </div>
-      <div class="page-3-single-overlay">
+      <!--  -->
+      <div class="page-3-single-overlay" style="display: flex">
         <div class="page-3-single-left-overlay">
           <h1 class="page-3-heading2">Leistungsinhalte Risikoleben</h1>
           <div class="horizontal-line"></div>
@@ -763,7 +844,6 @@
           <p class="page-3-subtitle">Höhere Leistung bei Unfalltod</p>
           <p>...</p>
         </div>
-        <div class="vertical-line"></div>
         <div
           class="page-3-single-right-overlay"
           style="display: flex; flex-direction: row; gap: 30px"
@@ -791,7 +871,561 @@
           </div>
         </div>
       </div>
+      <!--  -->
+      <!--  -->
+      <div class="page-3-single-overlay" style="display: flex">
+        <div class="page-3-single-left-overlay">
+          <h1 class="page-3-heading2">
+            Temporäre Erhöhung der Todesfallleistung
+          </h1>
+          <div class="horizontal-line"></div>
+          <p class="page-3-subtitle">Kinderbonus</p>
+          <p class="page-3-subtitle">Immobilienbonus</p>
+          <p>Hochzeitsbonus</p>
+        </div>
+        <div
+          class="page-3-single-right-overlay"
+          style="display: flex; flex-direction: row; gap: 30px"
+        >
+          <div
+            style="height: 200px; width: 1px; background-color: #1b1c4d33"
+          ></div>
+          <div>
+            <h1 class="page-3-heading2">gewünscht</h1>
+            <div
+              style="display: flex; flex-direction: column; margin-top: 56px"
+            >
+              <img
+                src="/assets/yes.svg"
+                alt="Yes"
+                style="height: 38px; width: 38px; margin-bottom: 16px"
+              />
+              <p>...</p>
+              <img
+                src="/assets/no.svg"
+                alt="Yes"
+                style="height: 38px; width: 38px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <!--  -->
+      <div class="page-3-single-overlay" style="display: flex">
+        <div class="page-3-single-left-overlay">
+          <h1 class="page-3-heading2">Qualität der Bedingungen allgemein</h1>
+          <div class="horizontal-line"></div>
+          <p class="page-3-subtitle">blabla</p>
+          <p class="page-3-subtitle">blabla</p>
+          <p>blabla</p>
+        </div>
+        <div
+          class="page-3-single-right-overlay"
+          style="display: flex; flex-direction: row; gap: 30px"
+        >
+          <div
+            style="height: 200px; width: 1px; background-color: #1b1c4d33"
+          ></div>
+          <div>
+            <h1 class="page-3-heading2">gewünscht</h1>
+            <div
+              style="display: flex; flex-direction: column; margin-top: 56px"
+            >
+              <img
+                src="/assets/yes.svg"
+                alt="Yes"
+                style="height: 38px; width: 38px; margin-bottom: 16px"
+              />
+              <p>...</p>
+              <img
+                src="/assets/no.svg"
+                alt="Yes"
+                style="height: 38px; width: 38px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
     </div>
     <!-- Page 3 End-->
+    <!-- Page 4 Starts-->
+    <div class="home-page-4-layout">
+      <div>
+        <h1 class="page-4-heading1">Produktempfehlung</h1>
+      </div>
+      <!--  -->
+      <div class="page-4-box-overlay-wrap">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 72px;
+          "
+        >
+          <div style="display: flex; gap: 32px">
+            <div>
+              <img
+                src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
+                alt="img-1"
+              />
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 40px">
+              <div>
+                <h1 class="page-4-flex-single-overlay-header">
+                  RisikoLebensversicherung Plus
+                </h1>
+              </div>
+              <div>
+                <div>
+                  <p class="page-4-flex-single-overlay-subtitle">
+                    Text der hier stehen soll, Gestaltung kommt dann. Text der
+                    hier stehen soll,  Gestaltung kommt dann.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 24px">
+            <div>
+              <img
+                src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+                alt="img-2"
+              />
+            </div>
+            <div class="single-card-item-price-wrap">
+              <h1>21,68 €</h1>
+              <div class="single-card-item-price">
+                <p>Mtl. max. Betrag</p>
+                <p>36,14 €</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bold-horizontal-line"></div>
+      </div>
+      <!--  -->
+      <!--  -->
+      <div class="page-4-box-overlay-wrap">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 72px;
+          "
+        >
+          <div style="display: flex; gap: 32px">
+            <div>
+              <img
+                src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
+                alt="img-1"
+              />
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 40px">
+              <div>
+                <h1 class="page-4-flex-single-overlay-header">Risikoleben</h1>
+              </div>
+              <div>
+                <div>
+                  <p class="page-4-flex-single-overlay-subtitle">
+                    Text der hier stehen soll, Gestaltung kommt dann. Text der
+                    hier stehen soll,  Gestaltung kommt dann.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 24px">
+            <div>
+              <img
+                src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+                alt="img-2"
+              />
+            </div>
+            <div class="single-card-item-price-wrap">
+              <h1>32,00 €</h1>
+              <div class="single-card-item-price">
+                <p>Mtl. max. Betrag</p>
+                <p>51,61 €</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bold-horizontal-line"></div>
+      </div>
+      <!--  -->
+      <!--  -->
+      <div class="page-4-box-overlay-wrap">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 72px;
+          "
+        >
+          <div style="display: flex; gap: 32px">
+            <div>
+              <img
+                src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
+                alt="img-1"
+              />
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 40px">
+              <div>
+                <h1 class="page-4-flex-single-overlay-header">
+                  Standard (E-RL)
+                </h1>
+              </div>
+              <div>
+                <div>
+                  <p class="page-4-flex-single-overlay-subtitle">
+                    Text der hier stehen soll, Gestaltung kommt dann. Text der
+                    hier stehen soll,  Gestaltung kommt dann.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 24px">
+            <div>
+              <img
+                src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+                alt="img-2"
+              />
+            </div>
+            <div class="single-card-item-price-wrap">
+              <h1>14,08 €</h1>
+              <div class="single-card-item-price">
+                <p>Mtl. max. Betrag</p>
+                <p>33,92 €</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bold-horizontal-line"></div>
+      </div>
+      <!--  -->
+    </div>
+    <!-- Page 4 Ends-->
+
+    <!-- Page 6 Starts-->
+    <div class="cards-items-main-wrap home-page-6-overlay">
+      <h1 class="card-head">Ergebnisse</h1>
+      <div class="cards-item-wrap">
+        <div class="single-card-item">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
+              alt="img-1"
+            />
+          </div>
+
+          <div class="single-card-item-text-wrap">
+            <div>
+              <h1>RisikoLebensversicherung Plus</h1>
+            </div>
+            <div class="single-card-item-text-wrap-chip-wrap">
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  BUZ Beitragsbefreiung 3,00 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Unfalltodesfallschutz 10,66 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-2"
+            />
+          </div>
+          <div class="single-card-item-price-wrap">
+            <h1>21,68 €</h1>
+            <div class="single-card-item-price">
+              <p>Mtl. max. Betrag</p>
+              <p>36,14 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="single-card-item">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qby0pjogqlkksb5klzdo.jpg"
+              alt="img-3"
+            />
+          </div>
+          <div class="single-card-item-text-wrap">
+            <div>
+              <h1>Risikoleben</h1>
+            </div>
+            <div class="single-card-item-text-wrap-chip-wrap">
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  BUZ Beitragsbefreiung 2,59 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Premium Risikoleben 9,59 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-4"
+            />
+          </div>
+          <div class="single-card-item-price-wrap">
+            <h1>32,00 €</h1>
+            <div class="single-card-item-price">
+              <p>Mtl. max. Betrag</p>
+              <p>51,61 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="single-card-item">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
+              alt="img-4"
+            />
+          </div>
+          <div class="single-card-item-text-wrap">
+            <div>
+              <h1>Standard (E-RL)</h1>
+            </div>
+            <div class="single-card-item-text-wrap-chip-wrap">
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Zusatzschutz Krebs Plus 6,19 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Premium E-RLP 4,22 € <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+              <div class="single-card-item-text-wrap-chip">
+                <p>+ 3</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-5"
+            />
+          </div>
+          <div class="single-card-item-price-wrap">
+            <h1>14,08 €</h1>
+            <div class="single-card-item-price">
+              <p>Mtl. max. Betrag</p>
+              <p>33,92 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="single-card-item">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/iynppbxopsd5uyuuhby6.jpg"
+              alt="img-6"
+            />
+          </div>
+          <div class="single-card-item-text-wrap">
+            <div>
+              <h1>Risikoversicherung T1 - Basis</h1>
+            </div>
+            <div class="single-card-item-text-wrap-chip-wrap">
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  BUZ Beitragsbefreiung 1,96 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Risikoversicherung T1 - Plus 4,96€
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>+ 1</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-7"
+            />
+          </div>
+          <div class="single-card-item-price-wrap">
+            <h1>13,99 €</h1>
+            <div class="single-card-item-price">
+              <p>Mtl. max. Betrag</p>
+              <p>31,10 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="single-card-item">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/rgrhgfwefqpwmpg5j5at.jpg"
+              alt="img-8"
+            />
+          </div>
+          <div class="single-card-item-text-wrap">
+            <div>
+              <h1>RISK-vario Basic</h1>
+            </div>
+            <div class="single-card-item-text-wrap-chip-wrap">
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Unfallzusatzversicherung 10,30 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Dread Disease Einmalleistung 32,11
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+              <div class="single-card-item-text-wrap-chip">
+                <p>+ 1</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-9"
+            />
+          </div>
+          <div class="single-card-item-price-wrap">
+            <h1>18,34 €</h1>
+            <div class="single-card-item-price">
+              <p>Mtl. max. Betrag</p>
+              <p>29,58 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="single-card-item">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
+              alt="img-10"
+            />
+          </div>
+          <div class="single-card-item-text-wrap">
+            <div>
+              <h1>Standard (E-RL)</h1>
+            </div>
+            <div class="single-card-item-text-wrap-chip-wrap">
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Zusatzschutz Krebs Plus 6,19 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Premium E-RLP 4,22 € <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>+ 3</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-11"
+            />
+          </div>
+          <div class="single-card-item-price-wrap">
+            <h1>14,08 €</h1>
+            <div class="single-card-item-price">
+              <p>Mtl. max. Betrag</p>
+              <p>33,92 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="single-card-item">
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/iynppbxopsd5uyuuhby6.jpg"
+            />
+          </div>
+          <div class="single-card-item-text-wrap">
+            <div>
+              <h1>Risikoversicherung T1 - Basis</h1>
+            </div>
+            <div class="single-card-item-text-wrap-chip-wrap">
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  BUZ Beitragsbefreiung 1,96 €
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+
+              <div class="single-card-item-text-wrap-chip">
+                <p>
+                  Risikoversicherung T1 - Plus 4,96€
+                  <span style="margin-left: 5px">+</span>
+                </p>
+              </div>
+              <div class="single-card-item-text-wrap-chip">
+                <p>+ 1</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+              alt="img-13"
+            />
+          </div>
+          <div class="single-card-item-price-wrap">
+            <h1>13,99 €</h1>
+            <div class="single-card-item-price">
+              <p>Mtl. max. Betrag</p>
+              <p>31,10 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page 6 Ends-->
   </body>
 </html>
