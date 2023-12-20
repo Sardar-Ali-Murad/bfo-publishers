@@ -508,9 +508,75 @@
       }
 
       /* Page 2 Ends */
+
+      /* Page 3 Start */
+      .home-page-3-layout {
+        margin-top: 1200px;
+        margin-left: 80px;
+      }
+
+      .page-3-heading1 {
+        font-family: Sharp Grotesk Medium;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .horizontal-line {
+        background-color: #1b1c4d33;
+        width: 80%;
+        height: 1px;
+        margin-top: 24px;
+        margin-bottom: 30px;
+      }
+      .vertical-line {
+        background-color: #1b1c4d33;
+        width: 1px;
+        height: 330px;
+        float: right;
+      }
+
+      .page-3-subtitle {
+        font-family: Arimo;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+        margin-bottom: 18px;
+      }
+
+      .page-3-single-left-overlay {
+        float: left;
+      }
+
+      .page-3-single-right-overlay {
+        float: right;
+        margin-right: 80px;
+      }
+      .page-3-heading2 {
+        font-family: Arimo;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1b1c4d;
+      }
+
+      .page-3-single-overlay {
+        margin: 72px 0px;
+      }
+
+      /* Page 3 Ends */
     </style>
   </head>
   <body>
+    <!-- Page 1 Starts -->
     <div class="home-page-1-layout">
       <img
         src="/assets//logo-start.svg"
@@ -557,6 +623,8 @@
         </div>
       </div>
     </div>
+    <!-- Page 1 End -->
+    <!-- Page 2 Start-->
     <div class="home-page-2-layout">
       <div class="home-page-2-header-layout">
         <h1 class="page-2-heading1">Wünsche & Bedürfnisse</h1>
@@ -668,5 +736,32 @@
         </div>
       </div>
     </div>
+    <!-- Page 2 Ends-->
+    <!-- Page 3 Start-->
+    <div class="home-page-3-layout">
+      <div>
+        <h1 class="page-3-heading1">
+          Folgende Leistungsinhalte wurden gewünscht
+        </h1>
+      </div>
+      <div class="page-3-single-overlay">
+        <div class="page-3-single-left-overlay">
+          <h1 class="page-3-heading2">Leistungsinhalte Risikoleben</h1>
+          <div class="horizontal-line"></div>
+          <p class="page-3-subtitle">
+            Vorgezogene Todesfallleistung bei terminaler Erkrankung
+          </p>
+          <p class="page-3-subtitle">Höhere Leistung bei Unfalltod</p>
+          <p>...</p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="page-3-single-right-overlay">
+          <h1 class="page-3-heading2">gewünscht</h1>
+          <img src="/assets/yes.svg" alt="Yes" />
+          <img src="/assets/yes.svg" alt="Yes" />
+        </div>
+      </div>
+    </div>
+    <!-- Page 3 End-->
   </body>
 </html>
