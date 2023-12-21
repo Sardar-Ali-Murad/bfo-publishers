@@ -8,6 +8,26 @@
       href="https://fonts.googleapis.com/css2?family=Arimo&family=Roboto:wght@300;400&family=Tilt+Neon&display=swap"
     />
     <title>Document</title>
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="author" content="Mike Bremford" />
+    <meta
+      name="description"
+      content="Slides discussing css-color-4 and how it can be applied to print(pdf) output"
+    />
+    <meta name="keywords" content="CSS, color, PDF" />
+    <meta name="dc.publisher" content="bfo.com" />
+    <meta
+      name="dc.source"
+      content="https://bfo.com/misc/css-color4-presentation"
+    />
+    <link
+      rel="alternate"
+      type="application/pdf"
+      href="https://bfo.com/misc/css-color4-presentation.pdf"
+    />
+    <link rel="canonical" href="https://bfo.com/misc/css-color4-presentation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="themes/ribbon/styles/styles.css" />
     <style>
       * {
         box-sizing: border-box;
@@ -33,6 +53,13 @@
         overflow-x: hidden;
       }
 
+      @media print {
+        .pagebreak {
+          page-break-before: always;
+          clear: both;
+        } /* page-break-after works, as well */
+      }
+
       .page-1-header-icon {
         margin-top: 32px;
         margin-left: 80px;
@@ -42,8 +69,8 @@
       }
 
       .line2-img {
-        position: absolute;
-        bottom: -180px;
+        position: relative;
+        top: -133px;
       }
 
       .home-page-1-header-layout {
@@ -151,12 +178,19 @@
       }
 
       .home-page-2-layout {
-        margin-top: 100px;
+        margin-top: 32px;
       }
+
+      #page-2-logo-img{
+        margin-top: 32px !important;
+        margin-left: 80px;
+      }
+
+      
 
       .home-page-2-grey-box-wrap {
         background-color: #1b1c4d14;
-        padding: 120px 77px;
+        padding: 72px 77px;
       }
 
       .page-2-heading1 {
@@ -405,7 +439,7 @@
       }
 
       .home-page-3-layout {
-        margin-top: 100px;
+        margin-top: 32px;
         margin-left: 80px;
       }
 
@@ -468,7 +502,7 @@
       }
 
       .home-page-4-layout {
-        margin: 120px 80px;
+        margin: 32px 80px;
       }
 
       .page-4-heading1 {
@@ -555,12 +589,13 @@
       }
 
       .home-page-6-overlay {
-        margin: 100px 80px;
+        margin: 32px 80px;
       }
 
       .home-page-5-layout {
         margin-left: 80px;
         margin-right: 80px;
+        margin-top: 32px;
       }
       .page-5-box-layout {
         margin-bottom: 24px;
@@ -664,6 +699,10 @@
         color: #1b1c4d;
         height: 80%;
         overflow-y: auto;
+      }
+
+      .page-logo {
+        margin-bottom: 72px;
       }
 
       @media screen and (max-width: 1100px) {
@@ -952,7 +991,15 @@
       />
     </div>
 
+    <!-- <div class="pagebreak"></div> -->
+
     <div class="home-page-2-layout">
+      <img
+        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+        class="page-logo"
+        alt="logo"
+        id="page-2-logo-img"
+      />
       <div class="home-page-2-header-layout">
         <h1 class="page-2-heading1 bold-font">Wünsche & Bedürfnisse</h1>
       </div>
@@ -1010,6 +1057,8 @@
           </div>
         </div>
       </div>
+      <div class="pagebreak"></div>
+
       <div class="page-2-box-overlay">
         <div>
           <h1 class="page-2-heading3 bold-font">
@@ -1040,6 +1089,8 @@
         </div>
       </div>
 
+
+
       <div class="page-2-box-overlay">
         <div>
           <h1 class="page-2-heading3 bold-font">
@@ -1065,9 +1116,17 @@
           </div>
         </div>
       </div>
+      <div class="pagebreak"></div>
+
     </div>
 
+
     <div class="home-page-3-layout">
+      <img
+        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+        class="page-logo"
+        alt="logo"
+      />
       <div>
         <h1 class="page-3- bold-font">
           Folgende Leistungsinhalte wurden gewünscht
@@ -1175,7 +1234,14 @@
       </div>
     </div>
 
+    <div class="pagebreak"></div>
+
     <div class="home-page-4-layout">
+      <img
+        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+        class="page-logo"
+        alt="logo"
+      />
       <div>
         <h1 class="page-4-heading1">Produktempfehlung</h1>
       </div>
@@ -1307,9 +1373,15 @@
         <div class="bold-horizontal-line"></div>
       </div>
     </div>
+    <div class="pagebreak"></div>
 
     <!-- Page 5 -->
     <div class="home-page-5-layout">
+      <img
+        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+        class="page-logo"
+        alt="logo"
+      />
       <div>
         <h1>Tarif- und Leistungsanalyse</h1>
       </div>
@@ -1606,7 +1678,14 @@
     </div>
     <!-- Page 5 -->
 
+    <div class="pagebreak"></div>
+
     <div class="cards-items-main-wrap home-page-6-overlay">
+      <img
+        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+        class="page-logo"
+        alt="logo"
+      />
       <h1 class="card-head">Ergebnisse</h1>
       <div class="cards-item-wrap">
         <div class="single-card-item">
@@ -1913,5 +1992,7 @@
         </div>
       </div>
     </div>
+
+    <div class="pagebreak"></div>
   </body>
 </html>
