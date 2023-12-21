@@ -117,10 +117,10 @@
       .page-1-left-overlay {
         margin-top: 120px;
         margin-right: 80px;
-        width: 36%;
+        width: 75% !important;
         position: relative;
         z-index: 10;
-        margin-left: 60%;
+        margin-left: 35%;
         text-align: start;
       }
 
@@ -156,14 +156,13 @@
         margin-bottom: 24px;
       }
       .page-1-heading5 {
-        font-family: "Arimo", sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 22px;
         font-weight: 700;
         line-height: 36px;
         letter-spacing: 0em;
         color: #1b1c4d;
         margin-bottom: 24px;
-        margin-top: 40px;
       }
 
       .home-page-2-layout {
@@ -755,6 +754,16 @@
           width: 100%;
           height: 620px;
         }
+        .page-logo,
+        .page-logo-right {
+          height: 100px !important;
+          width: 100px !important;
+          object-fit: contain !important;
+        }
+        .signature-img {
+          width: 150px;
+          height: 150px;
+        }
         .single-table-item-wrap {
           width: 30%;
           float: left;
@@ -846,10 +855,7 @@
           width: 50%;
           margin-left: 60%;
         }
-        .page-1-left-overlay img {
-          width: 150px;
-          height: 150px;
-        }
+
         .page-2-heading2 {
           font-size: 18px;
         }
@@ -904,11 +910,20 @@
       }
 
       @media screen and (max-width: 800px) {
-        .page-1-left-overlay {
-          margin-left: 50%;
+        .page-1-heading3 {
+          font-size: 20px;
         }
-        .page-logo-right {
-          float: left;
+        .page-1-left-overlay {
+          margin-left: 20% !important;
+        }
+        .page-1-left-overlay {
+          margin-left: 35%;
+        }
+        #page-2-logo-img {
+          margin-left: 20px !important;
+        }
+        .page-2-heading1 {
+          margin-left: 20px;
         }
       }
       @media screen and (max-width: 500px) {
@@ -921,6 +936,9 @@
         }
         .page-5-box-layout p {
           font-size: 10px;
+        }
+        .page-1-left-overlay {
+          margin-left: 20px !important;
         }
       }
 
@@ -965,23 +983,34 @@
         <h1 class="page-1-heading3">
           Am <span> 15.10.2023</span> überreicht durch
         </h1>
-        <div>
-          <h1 class="page-1-heading5">Windig & Knebel</h1>
-          <p class="home-page-1-subtitle">Versicherungsberatung AG</p>
-          <p class="home-page-1-subtitle">Musterstraße 1</p>
-          <p class="home-page-1-subtitle">12345 Musterstadt</p>
-        </div>
-        <div>
-          <h1 class="page-1-heading5">Ihr Ansprechpartner</h1>
-          <p class="home-page-1-subtitle">Sabine Schlau-Meier</p>
-          <p class="home-page-1-subtitle">+49 (0) 30 - 22 25 51 1</p>
-          <p class="home-page-1-subtitle">ssm@wk.ag</p>
-        </div>
-        <div>
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/ccmod7eqavticjrjeoan.jpg"
-            alt="signature"
-          />
+        <div style="display: flex">
+          <div style="flex: 0.5">
+            <img
+              src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+              alt="SWR"
+            />
+          </div>
+          <div style="flex: 1">
+            <div>
+              <h1 class="page-1-heading5">Windig & Knebel</h1>
+              <p class="home-page-1-subtitle">Versicherungsberatung AG</p>
+              <p class="home-page-1-subtitle">Musterstraße 1</p>
+              <p class="home-page-1-subtitle">12345 Musterstadt</p>
+            </div>
+            <div>
+              <h1 class="page-1-heading5">Ihr Ansprechpartner</h1>
+              <p class="home-page-1-subtitle">Sabine Schlau-Meier</p>
+              <p class="home-page-1-subtitle">+49 (0) 30 - 22 25 51 1</p>
+              <p class="home-page-1-subtitle">ssm@wk.ag</p>
+            </div>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/ccmod7eqavticjrjeoan.jpg"
+                alt="signature"
+                class="signature-img"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <img
