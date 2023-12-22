@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Arimo&family=Space+Grotesk:wght@300;400;500;600&display=swap"
     />
-
     <style>
       * {
         box-sizing: border-box;
@@ -387,23 +386,16 @@
       }
 
       .page-2-flex-wrap {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
 
-      .page-2-flex-wrap h1 {
-        font-family: "Arimo", sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 16px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
+      .page-2-flex-wrap h5 {
+        font-family: "Space Grotesk", sans-serif;
       }
       .page-2-flex-wrap p {
         font-family: "Arimo", sans-serif;
         font-size: 16px;
         font-weight: 400;
-        line-height: 36px;
         letter-spacing: 0em;
         text-align: left;
         color: #1b1c4d;
@@ -584,17 +576,15 @@
       }
       .page-5-box-layout {
         margin-bottom: 24px;
-        margin-top: 20px;
-        padding: 16px;
-        border-radius: 4px;
-        border: 1.5px solid #1b1c4d33;
-        gap: 4px;
-        padding-bottom: 32px;
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1.5px solid #1b1c4d33;
+  padding: 10px 16px;
       }
 
       .page-5-box-layout p {
         font-family: "Arimo", sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 18px;
         letter-spacing: 0em;
@@ -603,7 +593,7 @@
       }
       .page-5-box-layout h1 {
         font-family: "Arimo", sans-serif;
-        font-size: 16px;
+        font-size: 10px;
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0em;
@@ -612,13 +602,13 @@
       }
 
       .page-5-box-layout img {
-        height: 30px;
-        width: 100px;
+        height: 80px;
+        width: 66px;
         object-fit: contain;
       }
-      .page-5-box-layout p {
+      /* .page-5-box-layout p {
         float: left;
-      }
+      } */
       .page-5-box-layout h1 {
         float: right;
       }
@@ -876,10 +866,10 @@
           margin-right: 20px;
         }
         .page-5-box-layout p {
-          font-size: 13px;
+          font-size: 10px;
         }
         .page-5-box-layout h1 {
-          font-size: 13px;
+          font-size: 10px;
         }
         .page-1-heading3 {
           font-size: 20px;
@@ -1095,23 +1085,23 @@
           </h1>
           <div class="page-2-main-box-overlay">
             <div class="page-2-flex-wrap">
-              <h1>Geboren</h1>
+              <h5>Geboren</h5>
               <p>15.06.1987</p>
             </div>
             <div class="page-2-flex-wrap">
-              <h1>Versicherungsbeginn</h1>
+              <h5>Versicherungsbeginn</h5>
               <p>01.12.2023</p>
             </div>
             <div class="page-2-flex-wrap">
-              <h1>Dauer in Jahren</h1>
+              <h5>Dauer in Jahren</h5>
               <p>30 Jahre</p>
             </div>
             <div class="page-2-flex-wrap">
-              <h1>Beitrag</h1>
+              <h5>Beitrag</h5>
               <p>21,68 €</p>
             </div>
             <div class="page-2-flex-wrap">
-              <h1>Überschussverwendung</h1>
+              <h5>Überschussverwendung</h1>
               <p>---</p>
             </div>
           </div>
@@ -1120,20 +1110,20 @@
 
       <div class="page-2-box-overlay">
         <div>
-          <h1 class="page-2-heading3 bold-font">
+          <h5 class="page-2-heading3 bold-font">
             Angaben zu Beruf und Risiken
-          </h1>
+          </h5>
           <div class="page-2-main-box-overlay">
             <div class="page-2-flex-wrap">
-              <h1>Beschäftigungsverhältnis</h1>
+              <h5>Beschäftigungsverhältnis</h5>
               <p>angestellt</p>
             </div>
             <div class="page-2-flex-wrap">
-              <h1>Beruf/ausgeübte Tätigkeit</h1>
+              <h5>Beruf/ausgeübte Tätigkeit</h5>
               <p>Tischler</p>
             </div>
             <div class="page-2-flex-wrap">
-              <h1>Höchster Bildungsabschluss</h1>
+              <h5>Höchster Bildungsabschluss</h5>
               <p>Abitur</p>
             </div>
           </div>
@@ -1421,38 +1411,46 @@
       <div>
         <h1 class="card-head">Tarif- und Leistungsanalyse</h1>
       </div>
-      <div class="page-5-front-boxes-wrap">
-        <div class="page-5-box-layout">
+      <div
+      class="page-5-front-boxes-wrap"
+      style="display: flex; gap: 16px;"
+      >
+
+      <div style="flex: 1;visibility: none;">
+        <p style="opacity: 0;">None</p>
+      </div>
+
+        <div class="page-5-box-layout" style="flex: 2;">
           <div>
             <img
               src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
             />
-            <div>
+            <!-- <div> -->
               <p>RisikoLebensversicherung Kann auch 2 zeilen haben</p>
-              <h1>21,68 €</h1>
-            </div>
+              <!-- <h1>21,68 €</h1> -->
+            <!-- </div> -->
           </div>
         </div>
-        <div class="page-5-box-layout">
+        <div class="page-5-box-layout" style="flex: 1.8;">
           <div>
             <img
               src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qby0pjogqlkksb5klzdo.jpg"
             />
-            <div>
+            <!-- <div> -->
               <p>Risikoleben,  Kann auch 2 zeilen haben</p>
-              <h1>32,00 €</h1>
-            </div>
+              <!-- <h1>32,00 €</h1> -->
+            <!-- </div> -->
           </div>
         </div>
-        <div class="page-5-box-layout">
+        <div class="page-5-box-layout" style="flex: 1;">
           <div>
             <img
               src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
             />
-            <div>
+            <!-- <div> -->
               <p>Standard (E-RL),  Kann auch 2 zeilen haben</p>
-              <h1>14,08 €</h1>
-            </div>
+              <!-- <h1>14,08 €</h1> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -1466,7 +1464,7 @@
         <div class="page-5-white-box-wrap">
           Vorgezogene Todesfallleistung bei terminaler Erkrankung
         </div>
-        <div class="page-5-grey-box-wrap">
+        <div class="page-5-grey-box-wrap" style="flex: 2">
           <img
             src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
             alt="close"
@@ -1494,6 +1492,7 @@
           />
         </div>
       </div>
+
       <div
         class="page-5-flex-wrap"
         style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap"
@@ -1501,7 +1500,7 @@
         <div class="page-5-white-box-wrap" style="height: 90px">
           Extra-Todesfallleistung für Kind mitversichert (Todesfall des Kindes)
         </div>
-        <div class="page-5-grey-box-wrap" style="height: 90px">
+        <div class="page-5-grey-box-wrap" style="height: 90px;flex: 2;">
           <img
             src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
             alt="close"
@@ -1527,7 +1526,7 @@
         <div class="page-5-white-box-wrap" style="height: 90px">
           Zusatzleistung bei Tod im Ausland
         </div>
-        <div class="page-5-grey-box-wrap" style="height: 90px">
+        <div class="page-5-grey-box-wrap" style="height: 90px;flex: 2;">
           <img
             src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
             alt="close"
@@ -1549,6 +1548,8 @@
       <button class="page-5-btn">
         <p>Vertragliche Anpassungsmöglichkeiten</p>
       </button>
+          <div class="pagebreak"></div>
+
       <div
         class="page-5-flex-wrap"
         style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap"
