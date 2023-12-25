@@ -697,6 +697,7 @@
         margin-right: 80px;
         margin-top: 32px;
         overflow-x: auto;
+        min-width: 87vw;
       }
       .page-5-box-layout {
         margin-bottom: 24px;
@@ -1374,27 +1375,25 @@
       <div>
         <h1 class="page-4-heading1">Produktempfehlung</h1>
       </div>
-      <div class="page-4-box-overlay-wrap">
+      <!-- Product List Starts  -->
+      <#list products as product>
         <div class="single-card-item box-shadow-none">
           <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
-              alt="img-1"
-            />
+            <img src="${product.logo}" alt="img-1" />
           </div>
+
           <div class="single-card-item-text-wrap">
             <div>
               <h1
                 class="page-4-flex-single-overlay-header page-4-single-box-wrap-header"
               >
-                RisikoLebensversicherung Plus
+                ${product.name}
               </h1>
             </div>
             <div>
               <div>
                 <p class="page-4-flex-single-overlay-subtitle">
-                  Text der hier stehen soll, Gestaltung kommt dann. Text der
-                  hier stehen soll,  Gestaltung kommt dann.
+                  ${product.info}
                 </p>
               </div>
             </div>
@@ -1407,100 +1406,16 @@
             />
           </div>
           <div class="single-card-item-price-wrap">
-            <h1>21,68 €</h1>
+            <h1>${product.netto}</h1>
             <div class="single-card-item-price">
               <p>Mtl. max. Betrag</p>
-              <p>36,14 €</p>
+              <p>${product.brutto}</p>
             </div>
           </div>
         </div>
         <div class="bold-horizontal-line"></div>
-      </div>
-
-      <div class="page-4-box-overlay-wrap">
-        <div class="single-card-item box-shadow-none">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qby0pjogqlkksb5klzdo.jpg"
-              alt="img-1"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1
-                class="page-4-flex-single-overlay-header page-4-single-box-wrap-header"
-              >
-                Risikoleben
-              </h1>
-            </div>
-            <div>
-              <div>
-                <p class="page-4-flex-single-overlay-subtitle">
-                  Text der hier stehen soll, Gestaltung kommt dann. Text der
-                  hier stehen soll,  Gestaltung kommt dann.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-2"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>32,00 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>51,61 €</p>
-            </div>
-          </div>
-        </div>
-        <div class="bold-horizontal-line"></div>
-      </div>
-      <div class="page-4-box-overlay-wrap">
-        <div class="single-card-item box-shadow-none">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
-              alt="img-1"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1
-                class="page-4-flex-single-overlay-header page-4-single-box-wrap-header"
-              >
-                Standard (E-RL)
-              </h1>
-            </div>
-            <div>
-              <div>
-                <p class="page-4-flex-single-overlay-subtitle">
-                  Text der hier stehen soll, Gestaltung kommt dann. Text der
-                  hier stehen soll,  Gestaltung kommt dann.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-2"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>14,08 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>33,92 €</p>
-            </div>
-          </div>
-        </div>
-        <div class="bold-horizontal-line"></div>
-      </div>
+      </#list>
+      <!-- Product List Ends -->
     </div>
     <div class="pagebreak"></div>
 
@@ -1522,34 +1437,19 @@
         <div class="flex-1 visibility-none">
           <p class="opacity-0">None</p>
         </div>
-
-        <div class="page-5-box-layout flex-2">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
-            />
-            <p>RisikoLebensversicherung Kann auch 2 zeilen haben</p>
-            <p class="page-5-box-layout-para-box-1 font-bold">21,68 €</p>
+       <!-- Insurance Company List Starts -->
+       <#list products as product>
+       <div class="page-5-box-layout flex-2">
+         <div>
+           <img
+           src=${product.logo}
+           />
+           <p>${product.name}</p>
+           <p class="page-5-box-layout-para-box-1 font-bold">${product.netto}</p>
           </div>
         </div>
-        <div class="page-5-box-layout flex-1-8">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qby0pjogqlkksb5klzdo.jpg"
-            />
-            <p>Risikoleben,  Kann auch 2 zeilen haben</p>
-            <p class="page-5-box-layout-para-box-2 font-bold">32,00 €</p>
-          </div>
-        </div>
-        <div class="page-5-box-layout flex-1">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
-            />
-            <p>Standard (E-RL),  Kann auch 2 zeilen haben</p>
-            <p class="page-5-box-layout-para-box-3 font-bold">14,08 €</p>
-          </div>
-        </div>
+        </#list>
+        <!-- Insurance Company List Ends -->
       </div>
       <button class="page-5-btn">
         <p>Leistungsinhalte RisikoLeben</p>
@@ -1795,305 +1695,47 @@
       />
       <h1 class="card-head">Ergebnisse</h1>
       <div class="cards-item-wrap">
+        <!-- Ends Product List Starts -->
+        <#list products as product>
         <div class="single-card-item">
           <div>
             <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/gdnfsgb0uztuammgqyky.jpg"
+              src=${product.logo}
               alt="img-1"
             />
           </div>
           <div class="single-card-item-text-wrap">
             <div>
-              <h1>RisikoLebensversicherung Plus</h1>
+              <h1>${product.name}</h1>
             </div>
             <div class="single-card-item-chip-text-wrap">
+            <#list product.additionals as additional>
               <div class="single-card-item-text-wrap-chip">
                 <p>
-                  BUZ Beitragsbefreiung 3,00 €
+                  ${additional.name}
                   <span class="ml-5">+</span>
                 </p>
               </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Unfalltodesfallschutz 10,66 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
+              </#list> 
             </div>
+
           </div>
           <div>
             <img
               src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
               alt="img-2"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>21,68 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>36,14 €</p>
+              />
             </div>
-          </div>
-        </div>
-        <div class="single-card-item">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qby0pjogqlkksb5klzdo.jpg"
-              alt="img-3"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1>Risikoleben</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  BUZ Beitragsbefreiung 2,59 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Premium Risikoleben 9,59 €
-                  <span class="ml-5">+</span>
-                </p>
+            <div class="single-card-item-price-wrap">
+              <h1>${product.netto}</h1>
+              <div class="single-card-item-price">
+                <p>Mtl. max. Betrag</p>
+                <p>${product.brutto}</p>
               </div>
             </div>
           </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-4"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>32,00 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>51,61 €</p>
-            </div>
-          </div>
-        </div>
-        <div class="single-card-item">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
-              alt="img-4"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1>Standard (E-RL)</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Zusatzschutz Krebs Plus 6,19 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>Premium E-RLP 4,22 € <span class="ml-5">+</span></p>
-              </div>
-              <div class="single-card-item-text-wrap-chip">
-                <p>+ 3</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-5"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>14,08 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>33,92 €</p>
-            </div>
-          </div>
-        </div>
-        <div class="single-card-item">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/iynppbxopsd5uyuuhby6.jpg"
-              alt="img-6"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1>Risikoversicherung T1 - Basis</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  BUZ Beitragsbefreiung 1,96 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Risikoversicherung T1 - Plus 4,96€
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>+ 1</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-7"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>13,99 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>31,10 €</p>
-            </div>
-          </div>
-        </div>
-        <div class="pagebreak"></div>
-
-        <div class="single-card-item">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/rgrhgfwefqpwmpg5j5at.jpg"
-              alt="img-8"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1>RISK-vario Basic</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Unfallzusatzversicherung 10,30 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Dread Disease Einmalleistung 32,11
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-              <div class="single-card-item-text-wrap-chip">
-                <p>+ 1</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-9"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>18,34 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>29,58 €</p>
-            </div>
-          </div>
-        </div>
-        <div class="single-card-item">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/vo4zvdoqatyaeqcifj3o.jpg"
-              alt="img-10"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1>Standard (E-RL)</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Zusatzschutz Krebs Plus 6,19 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>Premium E-RLP 4,22 € <span class="ml-5">+</span></p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>+ 3</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-11"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>14,08 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>33,92 €</p>
-            </div>
-          </div>
-        </div>
-        <div class="single-card-item">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/iynppbxopsd5uyuuhby6.jpg"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1>Risikoversicherung T1 - Basis</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  BUZ Beitragsbefreiung 1,96 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  Risikoversicherung T1 - Plus 4,96€
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-              <div class="single-card-item-text-wrap-chip">
-                <p>+ 1</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-13"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>13,99 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>31,10 €</p>
-            </div>
-          </div>
-        </div>
+          </#list>
+          <!-- Ends Product List Ends -->
       </div>
     </div>
   </body>
