@@ -1265,100 +1265,33 @@
           Folgende Leistungsinhalte wurden gewünscht
         </h1>
       </div>
+      <#list allBenefits as benefit>
       <div class="page-3-single-overlay dispaly-flex">
         <div class="page-3-single-left-overlay">
-          <h1 class="page-3-heading2">Leistungsinhalte Risikoleben</h1>
+          <h1 class="page-3-heading2">${benefit.benefitName}</h1>
           <div class="horizontal-line"></div>
+          <#list benefit.childBenefits as childBenefit>
           <p class="page-3-subtitle">
-            Vorgezogene Todesfallleistung bei terminaler Erkrankung
+            ${childBenefit.benefitName}
           </p>
-          <p class="page-3-subtitle">Höhere Leistung bei Unfalltod</p>
-          <p>...</p>
+          </#list>
         </div>
         <div class="fixed-horizontal-line"></div>
         <div class="right-overlay-main-wrap">
           <h1 class="page-3-heading2">gewünscht</h1>
           <div class="mt-50">
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/p8mkyoxi4yrlzcwaxxjn.jpg"
-                alt="Yes"
-                class="height-38 width-38 mb-16"
-              />
-            </div>
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/p8mkyoxi4yrlzcwaxxjn.jpg"
-                alt="Yes"
-                class="height-38 width-38"
-              />
-            </div>
-          </div>
-          <p class="dot-wrap">...</p>
-        </div>
-      </div>
-      <div class="page-3-single-overlay dispaly-flex">
-        <div class="page-3-single-left-overlay">
-          <h1 class="page-3-heading2">
-            Temporäre Erhöhung der Todesfallleistung
-          </h1>
-          <div class="horizontal-line"></div>
-          <p class="page-3-subtitle">Kinderbonus</p>
-          <p class="page-3-subtitle">Immobilienbonus</p>
-          <p class="page-3-subtitle">Hochzeitsbonus</p>
-        </div>
-        <div class="fixed-horizontal-line"></div>
-        <div class="right-overlay-main-wrap">
-          <h1 class="page-3-heading2">gewünscht</h1>
-          <div class="mt-50">
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/p8mkyoxi4yrlzcwaxxjn.jpg"
-                alt="Yes"
-                class="height-38 width-38"
-              />
-            </div>
-            <p class="dot-wrap mb-16">...</p>
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/ekdg0bthpds6qiyp0hmj.jpg"
-                alt="No"
-                class="height-38 width-38"
-              />
+            <#list requiredBenefits as benefitsIds>
+               <div>
+                  ${benefitsIds}
+               </div>
+            </#list>
             </div>
           </div>
         </div>
-      </div>
-      <div class="page-3-single-overlay dispaly-flex">
-        <div class="page-3-single-left-overlay">
-          <h1 class="page-3-heading2">Qualität der Bedingungen allgemein</h1>
-          <div class="horizontal-line"></div>
-          <p class="page-3-subtitle">blabla</p>
-          <p class="page-3-subtitle">blabla</p>
-          <p class="page-3-subtitle">blabla</p>
-        </div>
-        <div class="fixed-horizontal-line"></div>
-        <div class="right-overlay-main-wrap">
-          <h1 class="page-3-heading2">gewünscht</h1>
-          <div class="mt-50">
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/p8mkyoxi4yrlzcwaxxjn.jpg"
-                alt="Yes"
-                class="height-38 width-38"
-              />
-            </div>
-            <p class="dot-wrap mb-16">...</p>
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/ekdg0bthpds6qiyp0hmj.jpg"
-                alt="Yes"
-                class="height-38 width-38"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      </#list>
+
+    
+
     </div>
 
     <div class="home-page-4-layout">
@@ -1434,7 +1367,7 @@
         <h1 class="card-head">Tarif- und Leistungsanalyse</h1>
       </div>
       <div class="page-5-front-boxes-wrap dispaly-flex gap-16">
-        <div class="flex-1 visibility-none">
+        <div class="flex-1 visibility-none flex-1">
           <p class="opacity-0">None</p>
         </div>
        <!-- Insurance Company List Starts -->
