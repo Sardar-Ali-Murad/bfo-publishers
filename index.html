@@ -1402,9 +1402,11 @@
       <button class="page-5-btn">
         <p>Leistungsinhalte RisikoLeben</p>
       </button>
+
+      <#list allBenefits as benefit>
       <div class="page-5-flex-wrap common-flex-wrap">
         <div class="page-5-white-box-wrap">
-          Vorgezogene Todesfallleistung bei terminaler Erkrankung
+          ${benefit.benefitName}
         </div>
         <div class="page-5-grey-box-wrap flex-2">
           <img
@@ -1434,198 +1436,9 @@
           />
         </div>
       </div>
+      </#list>
 
-      <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="page-5-white-box-wrap height-120">
-          Extra-Todesfallleistung für Kind mitversichert (Todesfall des Kindes)
-        </div>
-        <div class="page-5-grey-box-wrap height-110 flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-            alt="close"
-          />
-        </div>
-        <div class="page-5-grey-box-wrap height-110 flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-            alt="close"
-          />
-        </div>
-        <div class="page-5-grey-box-wrap height-110 flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-            alt="close"
-          />
-        </div>
-      </div>
-      <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="page-5-white-box-wrap height-110">
-          Zusatzleistung bei Tod im Ausland
-        </div>
-        <div class="page-5-grey-box-wrap height-110 flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-            alt="close"
-          />
-        </div>
-        <div class="page-5-grey-box-wrap height-110 flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-            alt="close"
-          />
-        </div>
-        <div class="page-5-grey-box-wrap height-110 flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-            alt="close"
-          />
-        </div>
-      </div>
-      <button class="page-5-btn">
-        <p>Vertragliche Anpassungsmöglichkeiten</p>
-      </button>
-      <div class="pagebreak"></div>
 
-      <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="page-5-white-box-wrap">
-          Beitragsdynamik möglich (bis Alter)
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            Zu Beginn der Versicherung kann eine Dynamik vereinbart werden.
-            Dadurch erhöht sich im 3-Jahres-Rhythmus die Versicherungsleistung
-            ohne erneute Gesundheitsprüfung (Erhöhung des Beitrags um 6 %).
-          </p>
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            Die VSU für die Risikoversicherung erhöht sich in jedem Jahr um 3 %
-            der Versicherungssumme des Vorjahres. Die Summenerhöhung bewirkt
-            eine Erhöhung des Tarifbeitrages.
-          </p>
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>2-10%</p>
-        </div>
-      </div>
-      <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="page-5-white-box-wrap height-120">
-          Kein Verlust des Dynamikrechts nach wiederholter Ablehnung durch VN
-        </div>
-        <div class="page-5-grey-box-wrap flex-2 height-120">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-        </div>
-        <div class="page-5-grey-box-wrap flex-2 height-120">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-        </div>
-        <div class="page-5-grey-box-wrap height-120 flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-        </div>
-      </div>
-      <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="page-5-white-box-wrap flex-1-3">
-          Bei Zahlungsschwierigkeiten mind. 6 Monate zinslose Stundung
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            AVB II Teil F Nr. 3.1 Sie können in Textform verlangen, dass unter
-            Beibehaltung des vollen Versicherungsschutzes die Beiträge für einen
-            Zeitraum von bis zu sechs Monaten zinslos gestundet werden. Die
-            gestundeten Beiträge sind mit Ablauf des Stundungszeitraumes
-            nachzuzahlen. Auf Antrag können Sie den Beitragsrückstand auch
-            zinslos in bis zu 24 Monatsraten ausgleichen.
-          </p>
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            § 13 Abs. 4, 5: Zinslose Beitragsstundung bis zu 6 Monate ( bei
-            Elternzeit, Pflegezeit oder Sabbatical sind 12 Monate möglich). Die
-            Rückzahlung kann als Einmalbeitrag oder Ratenzahlung neben den
-            laufenden Beiträgen in bis zu 12 Monaten zurück zahlen.
-          </p>
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            AVB Teil IV § 21 Nr. (2) Bei kurzfristigen Zahlungsschwierigkeiten
-            können Sie zur nächsten Beitragsfälligkeit für maximal 24 Monate
-            eine zinslose Stundung der Beiträge zu Ihrer Versicherung unter
-            Aufrechterhaltung des vollen Versicherungsschutzes verlangen.
-          </p>
-        </div>
-      </div>
-      <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="page-5-white-box-wrap flex-1-3">
-          Maximale Dauer der Zahlpause, nach der eine Wiederinkraftsetzung ohne
-          Gesundheitsprüfung möglich ist
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            AVB II Teil H Nr. 3.3 Bei Beitragsstundung und -pause keine Fristen.
-            Bei Wiederanhebung nach Herabsetzung des Beitrags: Innerhalb von
-            zwölf Monaten ab dem Termin, zu dem die Herabsetzung des Beitrags
-            wirksam wurde, erfolgt die Wiederanhebung ohne erneute
-            Risikoprüfung.
-          </p>
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            AVB § 13 Nr. (3) Nach jeder Beitragsfreistellung können Sie
-            innerhalb eines Jahres die Versicherung ohne erneute
-            Gesundheitsprüfung wiederherstellen lassen.
-          </p>
-        </div>
-        <div class="page-5-grey-box-wrap flex-2">
-          <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-            alt="close"
-          />
-          <p>
-            Beitragsfreistellung möglich, aber keine Reaktivierung ohne erneute
-            GP
-          </p>
-        </div>
-      </div>
     </div>
 
     <div class="pagebreak"></div>
