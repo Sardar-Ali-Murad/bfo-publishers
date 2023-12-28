@@ -1409,15 +1409,16 @@
             </div>
         </#list>
     </div>
+    <#list allBenefits as benefit>
     <button class="page-5-btn">
-        <p>Leistungsinhalte RisikoLeben</p>
+      <p>${benefit.benefitName}</p>
     </button>
 
     <div class="page-5-flex-wrap common-flex-wrap">
         <div class="flex-1">
-            <#list allBenefits as benefit>
+            <#list benefit.childBenefits as childBenefits>
                 <div class="page-5-white-box-wrap" >
-                    ${benefit.benefitName}
+                    ${childBenefits.benefitName}
                 </div>
             </#list>
         </div>
@@ -1446,6 +1447,8 @@
             </div>
         </#list>
     </div>
+    </#list>
+
 
 
 </div>
