@@ -95,6 +95,10 @@
             flex: 1.8 !important;
         }
 
+        .mb-16{
+          margin-bottom: 16px;
+        }
+
         .height-80 {
             height: 80px !important;
         }
@@ -278,7 +282,7 @@
 
         .home-page-2-grey-box-wrap {
             background-color: #1b1c4d14;
-            padding: 10px 77px;
+            padding: 15px 77px;
         }
 
         .page-2-heading1 {
@@ -1289,7 +1293,7 @@
                 <div class="mt-50">
                     <#list benefit.childBenefits as childBenefit>
                         <#if requiredBenefits?seq_contains(childBenefit.benefitId)>
-                            <div>
+                            <div class="mb-16">
                                 <img
                                         src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/p8mkyoxi4yrlzcwaxxjn.jpg"
                                         alt="Yes"
@@ -1297,7 +1301,7 @@
                                 />
                             </div>
                         <#else>
-                            <div>
+                            <div class="mb-16">
                                 <img
                                         src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/ekdg0bthpds6qiyp0hmj.jpg"
                                         alt="No"
@@ -1353,44 +1357,12 @@
             </div>
 
             <div>
-              ${product.stars}
-              <#if product.stars == 1>
               <div class="stars-flex-wrap">
                 <img
                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
                 alt="img-2"
                 />
               </div>
-              </#if>
-              <#if product.stars == 2>
-              <div class="stars-flex-wrap">
-                <img
-                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                alt="img-2"
-                />
-                <img
-                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                alt="img-2"
-                />
-              </div>
-              </#if>
-              <#if product.stars == 3>
-              <div class="stars-flex-wrap">
-                <img
-                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                alt="img-2"
-                />
-                <img
-                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                alt="img-2"
-                />
-                <img
-                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                alt="img-2"
-                />
-              </div>
-              </#if>
-
             </div>
             <div class="single-card-item-price-wrap">
                 <h1>${product.netto}</h1>
@@ -1402,7 +1374,6 @@
         </div>
         <div class="bold-horizontal-line"></div>
     </#list>
-    <!-- Product List Ends -->
 </div>
 <div class="pagebreak"></div>
 
@@ -1426,7 +1397,6 @@
         <div class="flex-1 visibility-none flex-1">
             <p class="opacity-0">None</p>
         </div>
-        <!-- Insurance Company List Starts -->
         <#list products as product>
             <div class="page-5-box-layout flex-2">
                 <div>
@@ -1438,7 +1408,6 @@
                 </div>
             </div>
         </#list>
-        <!-- Insurance Company List Ends -->
     </div>
     <button class="page-5-btn">
         <p>Leistungsinhalte RisikoLeben</p>
@@ -1498,7 +1467,6 @@
     />
     <h1 class="card-head">Ergebnisse</h1>
     <div class="cards-item-wrap">
-        <!-- Ends Product List Starts -->
         <#list products as product>
             <div class="single-card-item">
                 <div>
@@ -1538,7 +1506,6 @@
                 </div>
             </div>
         </#list>
-        <!-- Ends Product List Ends -->
     </div>
 </div>
 </body>
