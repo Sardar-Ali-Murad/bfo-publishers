@@ -1,1502 +1,1545 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDF</title>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Arimo&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Arimo&family=Space+Grotesk:wght@300;400;500;600&display=swap"
     />
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      p,
-      ul,
-      li {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: "Arial", sans-serif;
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      @media print {
-        .pagebreak {
-          page-break-before: always;
-          clear: both;
-        } /* page-break-after works, as well */
-      }
-
-      .ml-5 {
-        margin-left: 5px;
-      }
-
-      .flex-1 {
-        flex: 1 !important;
-      }
-      .flex-2 {
-        flex: 2 !important;
-      }
-      .mr-80 {
-        margin-right: 80px !important;
-      }
-      .flex-1-3 {
-        flex: 1.3 !important;
-      }
-      .flex-2-7 {
-        flex: 2.7 !important;
-      }
-
-      .mt-32 {
-        margin-top: 32px !important;
-      }
-
-      .mt-50 {
-        margin-top: 50px !important;
-      }
-
-      .box-shadow-none {
-        box-shadow: none !important;
-      }
-      .dispaly-flex {
-        display: flex !important;
-      }
-
-      .common-flex-wrap {
-        display: flex !important;
-        gap: 16px !important;
-      }
-
-      .mb-20 {
-        margin-bottom: 20px !important;
-      }
-
-      .font-32 {
-        font-size: 32px !important;
-      }
-
-      .height-110 {
-        height: 110px !important;
-      }
-
-      .flex-1-8 {
-        flex: 1.8 !important;
-      }
-
-      .height-80 {
-        height: 80px !important;
-      }
-
-      .width-80 {
-        width: 80px !important;
-      }
-
-      .flex-0-5 {
-        flex: 0.5 !important;
-      }
-
-      .height-120 {
-        height: 120px !important;
-      }
-
-      .mt-32 {
-        margin-top: 32px !important;
-      }
-
-      .height-38 {
-        height: 38px !important;
-      }
-
-      .width-38 {
-        width: 38px !important;
-      }
-
-      .mb-16 {
-        margin-bottom: 16px !important;
-      }
-
-      .gap-16 {
-        gap: 16px !important;
-      }
-
-      .visibility-none {
-        visibility: none !important;
-      }
-      .opacity-0 {
-        opacity: 0 !important;
-      }
-
-      .font-bold {
-        font-weight: bold !important;
-      }
-
-      .fixed-horizontal-line {
-        height: 200px;
-        width: 1px;
-        background-color: #1b1c4d33;
-      }
-
-      .page-1-header-icon {
-        margin-top: 32px;
-        margin-left: 70px;
-      }
-      .home-page-1-layout {
-        position: relative;
-      }
-
-      .page-logo-right {
-        float: right;
-      }
-
-      .line2-img {
-        position: absolute;
-        bottom: -30px;
-        left: -280px;
-      }
-
-      .home-page-1-header-layout {
-        margin-left: 80px;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 25px;
-        font-weight: 500;
-        line-height: 56px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #0ab7a7;
-        margin-top: 100px;
-      }
-
-      .page-1-grey-overlay {
-        padding: 15px 80px;
-        background-color: #1b1c4d14;
-        width: 60%;
-        margin-top: 30px;
-      }
-
-      .home-page-1-subtitle {
-        font-family: "Arimo", sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 36px;
-        letter-spacing: 0em;
-        color: #1b1c4d;
-      }
-
-      .page-1-heading1 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 25px;
-        font-weight: 500;
-        line-height: 48px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-      .page-1-heading2 {
-        font-family: "Arimo", sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 36px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-
-      .page-1-flex-overlay {
-        margin-bottom: 20px;
-      }
-
-      .page-1-left-overlay {
-        margin-top: 50px;
-        margin-right: 80px;
-        width: 75% !important;
-        position: relative;
-        z-index: 10;
-        margin-left: 45%;
-        text-align: start;
-      }
-
-      .page-1-heading3 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 48px;
-        letter-spacing: 0em;
-        text-align: right;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 25px;
-        font-weight: 500;
-        line-height: 48px;
-        letter-spacing: 0em;
-        text-align: start;
-        color: #1b1c4d;
-        margin-bottom: 30px;
-      }
-      .page-1-heading3 span {
-        color: #1b1c4d66;
-        text-decoration: underline;
-      }
-
-      .page-1-heading4 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 32px;
-        letter-spacing: 0em;
-        color: #1b1c4d !important;
-        margin-bottom: 24px;
-      }
-      .page-1-heading5 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 36px;
-        letter-spacing: 0em;
-        color: #1b1c4d;
-        margin-bottom: 0px;
-      }
-
-      .home-page-2-layout {
-        margin-top: 32px;
-      }
-
-      #page-2-logo-img {
-        margin-top: 32px !important;
-        margin-left: 80px;
-      }
-
-      .home-page-2-grey-box-wrap {
-        background-color: #1b1c4d14;
-        padding: 30px 77px;
-      }
-
-      .page-2-heading1 {
-        margin-bottom: 30px;
-        margin-left: 80px;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 32px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-
-      .page-2-heading2 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 32px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-      .page-2-logo-img {
-        float: right;
-        margin-top: -30px;
-      }
-
-      .single-card-item {
-        background-color: #ffffff;
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-        padding: 20px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        margin-top: 40px;
-      }
-
-      .single-card-item::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      .single-card-item > div {
-        float: left;
-        width: 24%;
-      }
-
-      .single-card-item > div:first-child {
-        margin-right: 4%;
-      }
-
-      .single-card-item-text-wrap {
-        width: 100%;
-      }
-
-      .single-card-item-text-wrap > div {
-        float: left;
-        margin-bottom: 8px;
-      }
-      .single-card-item-text-wrap > p :nth-child(2) {
-        float: right;
-        width: 100%;
-        margin-bottom: 8px;
-      }
-
-      .single-card-item-text-wrap-chip {
-        top: 775px;
-      }
-
-      .single-card-item-text-wrap-chip > span {
-        float: left;
-        padding: 4px 10px;
-        border-radius: 16px;
-        margin-right: 8px;
-        background-color: #1b1c4d14;
-        font-family: "Arimo", sans-serif !important;
-      }
-      .single-card-item-chip-text-wrap {
-        margin-left: -2px;
-      }
-
-      .single-card-item-chip-text-wrap > div {
-        float: left;
-        margin-bottom: 10px;
-        background: #1b1c4d14;
-        padding: 2px 10px;
-        border-radius: 15px;
-        margin-left: 4px;
-      }
-
-      .single-card-item-price-wrap {
-        margin-top: -40px;
-        margin-left: 80px;
-      }
-
-      .single-card-item-text-wrap {
-        width: 34% !important;
-      }
-
-      .single-card-item h1 {
-        margin-bottom: 10px;
-      }
-
-      .single-card-item-chip-text-wrap::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      .single-card-item-chip-text-wrap > span {
-        float: left;
-        margin-right: 10px;
-        font-family: "Arimo", sans-serif !important;
-      }
-
-      .single-card-item-text-wrap h1 {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 18px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-        font-family: "Space Grotesk", sans-serif;
-        margin-left: 10px;
-      }
-
-      .single-card-item-text-wrap-chip p {
-        font-family: "Arimo", sans-serif;
-        font-size: 11px;
-        font-weight: 700;
-        line-height: 14px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-
-      .single-card-item-price-wrap > div {
-        float: left;
-        width: 100%;
-        margin-bottom: 30px;
-      }
-
-      .single-card-item-price-wrap::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      .single-card-item-price-wrap h1 {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 25px;
-        letter-spacing: 0em;
-        text-align: right;
-        color: #1b1c4d;
-        font-weight: bolder !important;
-        font-family: "Arimo", sans-serif !important;
-      }
-
-      .single-card-item-price {
-        margin-top: 20px;
-      }
-
-      .single-card-item-price > span {
-        float: left;
-        margin-bottom: 5px;
-        font-family: "Arimo", sans-serif !important;
-      }
-
-      .single-card-item-price::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      .single-card-item-price p {
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 15px;
-        letter-spacing: 0em;
-        text-align: right;
-        color: #1b1c4d;
-        font-family: "Arimo", sans-serif !important;
-      }
-
-      .plus {
-        position: relative;
-        margin-left: 181px;
-        margin-top: -14px;
-      }
-
-      .page-2-box-overlay {
-        margin-top: 20px;
-        margin-left: 80px;
-        margin-right: 80px;
-      }
-
-      .page-2-heading3 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 32px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-        margin-bottom: 20px;
-      }
-
-      .page-2-main-box-overlay {
-        padding: 10px 72px 0px 72px;
-        border-radius: 4px;
-        border: 1.5px solid #1b1c4d33;
-      }
-
-      .page-2-flex-wrap {
-        margin-bottom: 10px;
-      }
-
-      .page-2-flex-wrap h5 {
-        font-family: "Space Grotesk", sans-serif;
-      }
-      .page-2-flex-wrap p {
-        font-family: "Arimo", sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-      .line-img {
-        position: absolute;
-        left: 50%;
-      }
-
-      .bold-font {
-        font-weight: bold;
-      }
-
-      .home-page-3-layout {
-        margin-top: 40px;
-        margin-left: 80px;
-      }
-
-      .page-3-heading1 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 32px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-
-      .horizontal-line {
-        background-color: #1b1c4d33;
-        width: 115%;
-        height: 1px;
-        margin-top: 24px;
-        margin-bottom: 20px;
-      }
-
-      .right-overlay-main-wrap {
-        margin-left: 25px;
-      }
-
-      .vertical-line {
-        background-color: #1b1c4d33;
-        width: 1px;
-        height: 330px;
-        float: right;
-      }
-
-      .page-3-subtitle {
-        font-family: "Arimo", sans-serif;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 36px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-        margin-bottom: 16px;
-      }
-
-      .page-5-box-layout-para-box-1,
-      .page-5-box-layout-para-box-2,
-      .page-5-box-layout-para-box-3 {
-        font-family: "Arimo", sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: right;
-        color: #1b1c4d;
-        font-weight: bold;
-      }
-
-      .page-3-single-left-overlay {
-        width: 80%;
-      }
-
-      .page-3-heading2 {
-        font-family: "Arimo", sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 36px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-
-      .page-3-single-overlay {
-        margin: 72px 0px;
-      }
-
-      .home-page-4-layout {
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-top: 32px;
-      }
-
-      .card-head {
-        font-family: "Space Grotesk", sans-serif;
-      }
-
-      .page-4-heading1 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 48px;
-        letter-spacing: 0em;
-        text-align: left;
-      }
-
-      .single-card-item-overlay {
-        padding: 20px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        margin-top: 40px;
-      }
-
-      .single-card-item-overlay {
-        padding: 20px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        margin-top: 40px;
-      }
-
-      .dot-wrap {
-        margin-left: 11px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .single-card-item-overlay::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      .single-card-item-overlay > div {
-        float: left;
-        width: 24%;
-      }
-
-      .single-card-item-overlay > div:first-child {
-        margin-right: 4%;
-      }
-
-      .single-card-item-overlay h1 {
-        margin-bottom: 10px;
-      }
-
-      .page-4-flex-single-overlay-header {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 28px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-
-      .page-4-flex-single-overlay-subtitle {
-        font-family: "Arimo", sans-serif;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-
-      .bold-horizontal-line {
-        background-color: #d9d9d9;
-        height: 8px;
-        width: 100%;
-      }
-
-      .page-4-single-box-wrap-header {
-        margin-left: 0px !important;
-        font-size: 15px !important;
-      }
-
-      .page-4-box-overlay-wrap {
-        margin-top: 40px;
-      }
-
-      .home-page-6-overlay {
-        margin: 32px 80px;
-      }
-
-      .home-page-5-layout {
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-top: 32px;
-        overflow-x: auto;
-        min-width: 87vw;
-      }
-      .page-5-box-layout {
-        margin-bottom: 24px;
-        margin-top: 20px;
-        border-radius: 4px;
-        border: 1.5px solid #1b1c4d33;
-        padding: 10px 16px;
-        height: 180px;
-      }
-
-      .page-5-box-layout p {
-        font-family: "Arimo", sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-      }
-      .page-5-box-layout h1 {
-        font-family: "Arimo", sans-serif;
-        font-size: 10px;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: right;
-        color: #1b1c4d;
-      }
-
-      .page-5-box-layout img {
-        height: 35px;
-        width: 66px;
-        object-fit: contain;
-      }
-
-      .page-5-box-layout h1 {
-        float: right;
-      }
-
-      .page-5-btn {
-        padding: 16px 20px 16px 20px;
-        border-radius: 8px;
-        border: 1.5px solid #1b1c4d33;
-        gap: 10px;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 28px;
-        letter-spacing: 0em;
-        text-align: center;
-        background-color: white;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 16px;
-      }
-      .page-5-btn p {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 28px;
-        letter-spacing: 0em;
-        text-align: center;
-        color: #1b1c4d;
-      }
-
-      .page-5-flex-wrap {
-        margin-top: 16px;
-      }
-
-      .page-5-white-box-wrap {
-        padding: 18px 15px;
-        background-color: white;
-        flex: 1 !important;
-        font-size: 10px;
-        height: 280px;
-      }
-
-      .page-5-grey-box-wrap {
-        background-color: #e3e3e880;
-        padding: 18px 15px;
-        flex: 2 !important;
-        margin-bottom: 16px;
-        height: 280px;
-      }
-      .page-5-grey-box-wrap img {
-        width: 100%;
-        height: 20px;
-        object-fit: contain;
-      }
-      .page-5-grey-box-wrap p {
-        font-family: "Arimo", sans-serif;
-        font-size: 10px;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #1b1c4d;
-        height: 80%;
-        overflow-y: auto;
-      }
-
-      .page-logo {
-        margin-bottom: 30px;
-        margin-left: -15px;
-      }
-
-      @media screen and (max-width: 1100px) {
-        .line-img {
-          display: none;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        .table-wrap {
-          width: 100%;
-          height: 400px;
-        }
-      }
-      @media screen and (max-width: 1100px) {
-        .single-table-item-wrap {
-          width: 30%;
-          float: left;
-          box-sizing: border-box;
-          margin-right: 10px;
-          margin-bottom: 52px !important;
-        }
-        .table-wrap {
-          width: 100%;
-        }
-        .cards-items-main-wrap {
-          margin-top: 140px;
-        }
-      }
-      @media screen and (max-width: 900px) {
-        .table-wrap {
-          gap: 30px;
-        }
-        .main-wrap {
-          height: auto;
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
         }
 
-        .single-card-item-chip-text-wrap {
-          width: 100px;
+        body {
+            font-family: "Arial", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-      }
 
-      @media screen and (max-width: 800px) {
-        .table-wrap {
-          width: 100% !important;
+        @media print {
+            .pagebreak {
+              page-break-before: always;
+               clear: both;
+            } /* page-break-after works, as well */
         }
-        .cards-items-main-wrap {
-          margin-top: 50px;
-        }
-      }
-      @media screen and (max-width: 600px) {
-        .table-wrap {
-          gap: 30px;
-        }
-      }
 
-      @media screen and (max-width: 800px) {
-        .table-wrap {
-          width: 100%;
-          height: 620px;
+        .ml-5 {
+            margin-left: 5px;
         }
-        .page-logo,
-        .page-logo-right {
-          height: 100px !important;
-          width: 100px !important;
-          object-fit: contain !important;
-        }
-        .signature-img {
-          width: 150px;
-          height: 150px;
-        }
-        .single-table-item-wrap {
-          width: 30%;
-          float: left;
-          box-sizing: border-box;
-          margin-right: 10px;
-          margin-bottom: 52px;
-        }
-      }
-      @media screen and (max-width: 700px) {
-        .single-table-item-wrap {
-          width: 46%;
-          float: left;
-          box-sizing: border-box;
-          margin-right: 10px;
-          margin-bottom: 52px;
-        }
-      }
-      @media screen and (max-width: 650px) {
-        .table-wrap {
-          width: 76%;
-          height: 1100px;
-        }
-        .single-table-item-wrap {
-          width: 52%;
-          float: left;
-          box-sizing: border-box;
-          margin-right: 10px;
-          margin-bottom: 52px;
-        }
-      }
-      @media screen and (max-width: 570px) {
-        .table-wrap {
-          width: 100%;
-          height: 1150px;
-        }
-      }
 
-      @media screen and (max-width: 992px) {
-        .single-card-item > div {
-          float: left;
-          width: 60%;
+        .flex-1 {
+            flex: 1 !important;
         }
-        .single-card-item-price-wrap {
-          margin-left: 266px;
-          margin-top: -38px;
+        .flex-2 {
+            flex: 2 !important;
         }
-      }
-      @media screen and (max-width: 900px) {
-        .single-card-item-text-wrap-chip {
-          width: 226px !important;
+        .mr-80 {
+            margin-right: 80px !important;
         }
-      }
-      @media screen and (max-width: 780px) {
-        .single-card-item > div {
-          float: left;
-          width: 100%;
+        .flex-1-3 {
+            flex: 1.3 !important;
         }
-        .single-card-item-price-wrap {
-          margin-left: 0px;
+        .flex-2-7 {
+            flex: 2.7 !important;
         }
-      }
 
-      @media screen and (max-width: 1100px) {
-        .page-1-grey-overlay {
-          width: 70% !important;
-          padding-top: 30px;
-          padding-bottom: 30px;
+        .mt-32 {
+            margin-top: 32px !important;
         }
-      }
-      @media screen and (max-width: 600px) {
-        .page-1-grey-overlay {
-          width: 90% !important;
-          padding-left: 20px;
+
+        .mt-50 {
+            margin-top: 50px !important;
         }
-        .home-page-1-subtitle {
-          font-size: 16px;
+
+        .box-shadow-none {
+            box-shadow: none !important;
         }
-        .home-page-1-header-layout {
-          margin-top: 150px;
+        .dispaly-flex {
+            display: flex !important;
         }
-        .home-page-1-header-layout {
-          font-size: 18px;
-          margin-left: 20px;
+
+        .common-flex-wrap {
+            display: flex !important;
+            gap: 16px !important;
         }
+
+        .mb-20 {
+            margin-bottom: 20px !important;
+        }
+
+        .font-32 {
+            font-size: 32px !important;
+        }
+
+        .height-110 {
+            height: 110px !important;
+        }
+
+        .flex-1-8 {
+            flex: 1.8 !important;
+        }
+
+        .height-80 {
+            height: 80px !important;
+        }
+
+        .width-80 {
+            width: 80px !important;
+        }
+
+        .flex-0-5 {
+            flex: 0.5 !important;
+        }
+
+        .height-120 {
+            height: 120px !important;
+        }
+
+        .mt-32 {
+            margin-top: 32px !important;
+        }
+
+        .height-38 {
+            height: 38px !important;
+        }
+
+        .width-38 {
+            width: 38px !important;
+        }
+
+        .mb-16 {
+            margin-bottom: 16px !important;
+        }
+
+        .gap-16 {
+            gap: 16px !important;
+        }
+
+        .visibility-none {
+            visibility: none !important;
+        }
+        .opacity-0 {
+            opacity: 0 !important;
+        }
+
+        .font-bold {
+            font-weight: bold !important;
+        }
+
+        .fixed-horizontal-line {
+            height: 200px;
+            width: 1px;
+            background-color: #1b1c4d33;
+        }
+
         .page-1-header-icon {
-          margin-left: 20px;
+            margin-top: 32px;
+            margin-left: 70px;
         }
-        .page-1-left-overlay {
-          width: 50%;
-          margin-left: 60%;
+        .home-page-1-layout {
+            position: relative;
         }
 
-        .page-2-heading2 {
-          font-size: 18px;
+        .page-logo-right {
+            float: right;
         }
-        .home-page-2-grey-box-wrap {
-          padding: 72px 20px;
+
+        .line2-img {
+            position: absolute;
+            bottom: -30px;
+            left: -280px;
         }
-        .page-2-box-overlay {
-          margin-left: 20px;
-          margin-right: 20px;
+
+        .home-page-1-header-layout {
+            margin-left: 80px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 56px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0ab7a7;
+            margin-top: 100px;
         }
-        .home-page-3-layout {
-          margin-left: 20px;
+
+        .page-1-grey-overlay {
+            padding: 15px 80px;
+            background-color: #1b1c4d14;
+            width: 60%;
+            margin-top: 30px;
         }
-        .page-3-heading2 {
-          font-size: 13px;
+
+        .home-page-1-subtitle {
+            font-family: "Arimo", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 0em;
+            color: #1b1c4d;
         }
-        .page-3-single-left-overlay {
-          width: 70%;
+
+        .page-1-heading1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
         }
-        .home-page-4-layout {
-          margin: 80px 20px;
+        .page-1-heading2 {
+            font-family: "Arimo", sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
         }
-        .home-page-5-layout {
-          margin-left: 20px;
-          margin-right: 20px;
+
+        .page-1-flex-overlay {
+            margin-bottom: 20px;
         }
-        .page-5-box-layout p {
-          font-size: 10px;
+
+        .page-1-left-overlay {
+            margin-top: 50px;
+            margin-right: 80px;
+            width: 75% !important;
+            position: relative;
+            z-index: 10;
+            margin-left: 45%;
+            text-align: start;
         }
-        .page-5-box-layout h1 {
-          font-size: 10px;
-        }
+
         .page-1-heading3 {
-          font-size: 20px;
-          margin-bottom: 30px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: right;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: start;
+            color: #1b1c4d;
+            margin-bottom: 30px;
+        }
+        .page-1-heading3 span {
+            color: #1b1c4d66;
+            text-decoration: underline;
+        }
+
+        .page-1-heading4 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0em;
+            color: #1b1c4d !important;
+            margin-bottom: 24px;
         }
         .page-1-heading5 {
-          font-size: 14px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            color: #1b1c4d;
+            margin-bottom: 0px;
         }
-        .home-page-1-subtitle {
-          font-size: 13px;
-        }
-        .page-4-flex-single-overlay-subtitle {
-          font-size: 13px;
-        }
-        .home-page-6-overlay {
-          margin: 60px 20px;
-        }
-        .page-logo {
-          margin-left: 0px;
-        }
-      }
 
-      @media screen and (max-width: 800px) {
-        .page-1-heading3 {
-          font-size: 20px;
+        .home-page-2-layout {
+            margin-top: 32px;
         }
-        .page-1-left-overlay {
-          margin-left: 20% !important;
-        }
-        .page-1-left-overlay {
-          margin-left: 35%;
-        }
+
         #page-2-logo-img {
-          margin-left: 20px !important;
+            margin-top: 32px !important;
+            margin-left: 80px;
         }
+
+        .home-page-2-grey-box-wrap {
+            background-color: #1b1c4d14;
+            padding: 10px 77px;
+        }
+
         .page-2-heading1 {
-          margin-left: 20px;
+            margin-bottom: 30px;
+            margin-left: 80px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
         }
-      }
-      @media screen and (max-width: 500px) {
+
         .page-2-heading2 {
-          font-size: 14px;
-          width: 70%;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
         }
         .page-2-logo-img {
-          margin-top: -50px;
+            float: right;
+            margin-top: -30px;
+        }
+
+        .single-card-item {
+            background-color: #ffffff;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .single-card-item::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .single-card-item > div {
+            float: left;
+            width: 24%;
+        }
+
+        .single-card-item > div:first-child {
+            margin-right: 4%;
+        }
+
+        .single-card-item-text-wrap {
+            width: 100%;
+        }
+
+        .single-card-item-text-wrap > div {
+            float: left;
+            margin-bottom: 8px;
+        }
+        .single-card-item-text-wrap > p :nth-child(2) {
+            float: right;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .single-card-item-text-wrap-chip {
+            top: 775px;
+        }
+
+        .single-card-item-text-wrap-chip > span {
+            float: left;
+            padding: 4px 10px;
+            border-radius: 16px;
+            margin-right: 8px;
+            background-color: #1b1c4d14;
+            font-family: "Arimo", sans-serif !important;
+        }
+        .single-card-item-chip-text-wrap {
+            margin-left: -2px;
+        }
+
+        .single-card-item-chip-text-wrap > div {
+            float: left;
+            margin-bottom: 10px;
+            background: #1b1c4d14;
+            padding: 2px 10px;
+            border-radius: 15px;
+            margin-left: 4px;
+        }
+
+        .single-card-item-price-wrap {
+            margin-top: -40px;
+            margin-left: 80px;
+        }
+
+        .single-card-item-text-wrap {
+            width: 34% !important;
+        }
+
+        .single-card-item h1 {
+            margin-bottom: 10px;
+        }
+
+        .single-card-item-chip-text-wrap::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .single-card-item-chip-text-wrap > span {
+            float: left;
+            margin-right: 10px;
+            font-family: "Arimo", sans-serif !important;
+        }
+
+        .single-card-item-text-wrap h1 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+            font-family: "Space Grotesk", sans-serif;
+            margin-left: 10px;
+        }
+
+        .single-card-item-text-wrap-chip p {
+            font-family: "Arimo", sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .single-card-item-price-wrap > div {
+            float: left;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .single-card-item-price-wrap::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .single-card-item-price-wrap h1 {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: right;
+            color: #1b1c4d;
+            font-weight: bolder !important;
+            font-family: "Arimo", sans-serif !important;
+        }
+
+        .single-card-item-price {
+            margin-top: 20px;
+        }
+
+        .single-card-item-price > span {
+            float: left;
+            margin-bottom: 5px;
+            font-family: "Arimo", sans-serif !important;
+        }
+
+        .single-card-item-price::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .single-card-item-price p {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: right;
+            color: #1b1c4d;
+            font-family: "Arimo", sans-serif !important;
+        }
+
+        .plus {
+            position: relative;
+            margin-left: 181px;
+            margin-top: -14px;
+        }
+
+        .page-2-box-overlay {
+            margin-top: 20px;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+
+        .page-2-heading3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+            margin-bottom: 15px;
+        }
+
+        .page-2-main-box-overlay {
+            padding: 10px 72px 0px 72px;
+            border-radius: 4px;
+            border: 1.5px solid #1b1c4d33;
+        }
+
+        .page-2-flex-wrap {
+            margin-bottom: 10px;
+        }
+
+        .page-2-flex-wrap h5 {
+            font-family: "Space Grotesk", sans-serif;
+        }
+        .page-2-flex-wrap p {
+            font-family: "Arimo", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+        .line-img {
+            position: absolute;
+            left: 50%;
+        }
+
+        .bold-font {
+            font-weight: bold;
+        }
+
+        .home-page-3-layout {
+            margin-top: 40px;
+            margin-left: 80px;
+        }
+
+        .page-3-heading1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .horizontal-line {
+            background-color: #1b1c4d33;
+            width: 115%;
+            height: 1px;
+            margin-top: 24px;
+            margin-bottom: 20px;
+        }
+
+        .right-overlay-main-wrap {
+            margin-left: 25px;
+        }
+
+        .vertical-line {
+            background-color: #1b1c4d33;
+            width: 1px;
+            height: 330px;
+            float: right;
+        }
+
+        .page-3-subtitle {
+            font-family: "Arimo", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+            margin-bottom: 16px;
+        }
+
+        .page-5-box-layout-para-box-1,
+        .page-5-box-layout-para-box-2,
+        .page-5-box-layout-para-box-3 {
+            font-family: "Arimo", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: right;
+            color: #1b1c4d;
+            font-weight: bold;
+        }
+
+        .page-3-single-left-overlay {
+            width: 80%;
+        }
+
+        .page-3-heading2 {
+            font-family: "Arimo", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .page-3-single-overlay {
+            margin: 72px 0px;
+        }
+
+        .home-page-4-layout {
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-top: 32px;
+        }
+
+        .card-head {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .page-4-heading1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        .single-card-item-overlay {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .single-card-item-overlay {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .dot-wrap {
+            margin-left: 11px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .single-card-item-overlay::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .single-card-item-overlay > div {
+            float: left;
+            width: 24%;
+        }
+
+        .single-card-item-overlay > div:first-child {
+            margin-right: 4%;
+        }
+
+        .single-card-item-overlay h1 {
+            margin-bottom: 10px;
+        }
+
+        .page-4-flex-single-overlay-header {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .page-4-flex-single-overlay-subtitle {
+            font-family: "Arimo", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .bold-horizontal-line {
+            background-color: #d9d9d9;
+            height: 8px;
+            width: 100%;
+        }
+
+        .page-4-single-box-wrap-header {
+            margin-left: 0px !important;
+            font-size: 15px !important;
+        }
+
+        .page-4-box-overlay-wrap {
+            margin-top: 40px;
+        }
+
+        .home-page-6-overlay {
+            margin: 32px 80px;
+        }
+
+        .home-page-5-layout {
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-top: 32px;
+            overflow-x: auto;
+            min-width: 87vw;
+        }
+        .page-5-box-layout {
+            margin-bottom: 24px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1.5px solid #1b1c4d33;
+            padding: 10px 16px;
+            height: 180px;
         }
 
         .page-5-box-layout p {
-          font-size: 10px;
+            font-family: "Arimo", sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
         }
-        .page-1-left-overlay {
-          margin-left: 20px !important;
+        .page-5-box-layout h1 {
+            font-family: "Arimo", sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: right;
+            color: #1b1c4d;
         }
-      }
 
-      @media screen and (max-width: 900px) {
-        .line2-img {
-          display: none;
+        .page-5-box-layout img {
+            height: 35px;
+            width: 66px;
+            object-fit: contain;
         }
-      }
+
+        .page-5-box-layout h1 {
+            float: right;
+        }
+
+        .page-5-btn {
+            padding: 16px 20px 16px 20px;
+            border-radius: 8px;
+            border: 1.5px solid #1b1c4d33;
+            gap: 10px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+            background-color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 16px;
+        }
+        .page-5-btn p {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #1b1c4d;
+        }
+
+        .page-5-flex-wrap {
+            margin-top: 16px;
+        }
+
+        .page-5-white-box-wrap {
+            padding: 18px 15px;
+            background-color: white;
+            flex: 1 !important;
+            font-size: 10px;
+            height: 280px;
+        }
+
+        .page-5-grey-box-wrap {
+            background-color: #e3e3e880;
+            padding: 18px 15px;
+            flex: 2 !important;
+            margin-bottom: 16px;
+            height: 280px;
+        }
+        .page-5-grey-box-wrap img {
+            width: 100%;
+            height: 20px;
+            object-fit: contain;
+        }
+        .page-5-grey-box-wrap p {
+            font-family: "Arimo", sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+            height: 80%;
+            overflow-y: auto;
+        }
+
+        .page-logo {
+            margin-bottom: 30px;
+            margin-left: -15px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .line-img {
+                display: none;
+            }
+            .table-wrap {
+                width: 100%;
+                height: 400px;
+            }
+        }
+        @media screen and (max-width: 1100px) {
+            .single-table-item-wrap {
+                width: 30%;
+                float: left;
+                box-sizing: border-box;
+                margin-right: 10px;
+                margin-bottom: 52px !important;
+            }
+            .table-wrap {
+                width: 100%;
+            }
+            .cards-items-main-wrap {
+                margin-top: 140px;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .table-wrap {
+                gap: 30px;
+            }
+            .main-wrap {
+                height: auto;
+            }
+
+            .single-card-item-chip-text-wrap {
+                width: 100px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .table-wrap {
+                width: 100% !important;
+            }
+            .cards-items-main-wrap {
+                margin-top: 50px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .table-wrap {
+                gap: 30px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .table-wrap {
+                width: 100%;
+                height: 620px;
+            }
+            .page-logo,
+            .page-logo-right {
+                height: 100px !important;
+                width: 100px !important;
+                object-fit: contain !important;
+            }
+            .signature-img {
+                width: 150px;
+                height: 150px;
+            }
+            .single-table-item-wrap {
+                width: 30%;
+                float: left;
+                box-sizing: border-box;
+                margin-right: 10px;
+                margin-bottom: 52px;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .single-table-item-wrap {
+                width: 46%;
+                float: left;
+                box-sizing: border-box;
+                margin-right: 10px;
+                margin-bottom: 52px;
+            }
+        }
+        @media screen and (max-width: 650px) {
+            .table-wrap {
+                width: 76%;
+                height: 1100px;
+            }
+            .single-table-item-wrap {
+                width: 52%;
+                float: left;
+                box-sizing: border-box;
+                margin-right: 10px;
+                margin-bottom: 52px;
+            }
+        }
+        @media screen and (max-width: 570px) {
+            .table-wrap {
+                width: 100%;
+                height: 1150px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .single-card-item > div {
+                float: left;
+                width: 60%;
+            }
+            .single-card-item-price-wrap {
+                margin-left: 266px;
+                margin-top: -38px;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .single-card-item-text-wrap-chip {
+                width: 226px !important;
+            }
+        }
+        @media screen and (max-width: 780px) {
+            .single-card-item > div {
+                float: left;
+                width: 100%;
+            }
+            .single-card-item-price-wrap {
+                margin-left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            .page-1-grey-overlay {
+                width: 70% !important;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .page-1-grey-overlay {
+                width: 90% !important;
+                padding-left: 20px;
+            }
+            .home-page-1-subtitle {
+                font-size: 16px;
+            }
+            .home-page-1-header-layout {
+                margin-top: 150px;
+            }
+            .home-page-1-header-layout {
+                font-size: 18px;
+                margin-left: 20px;
+            }
+            .page-1-header-icon {
+                margin-left: 20px;
+            }
+            .page-1-left-overlay {
+                width: 50%;
+                margin-left: 60%;
+            }
+
+            .page-2-heading2 {
+                font-size: 18px;
+            }
+            .home-page-2-grey-box-wrap {
+                padding: 72px 20px;
+            }
+            .page-2-box-overlay {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .home-page-3-layout {
+                margin-left: 20px;
+            }
+            .page-3-heading2 {
+                font-size: 13px;
+            }
+            .page-3-single-left-overlay {
+                width: 70%;
+            }
+            .home-page-4-layout {
+                margin: 80px 20px;
+            }
+            .home-page-5-layout {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .page-5-box-layout p {
+                font-size: 10px;
+            }
+            .page-5-box-layout h1 {
+                font-size: 10px;
+            }
+            .page-1-heading3 {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+            .page-1-heading5 {
+                font-size: 14px;
+            }
+            .home-page-1-subtitle {
+                font-size: 13px;
+            }
+            .page-4-flex-single-overlay-subtitle {
+                font-size: 13px;
+            }
+            .home-page-6-overlay {
+                margin: 60px 20px;
+            }
+            .page-logo {
+                margin-left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .page-1-heading3 {
+                font-size: 20px;
+            }
+            .page-1-left-overlay {
+                margin-left: 20% !important;
+            }
+            .page-1-left-overlay {
+                margin-left: 35%;
+            }
+            #page-2-logo-img {
+                margin-left: 20px !important;
+            }
+            .page-2-heading1 {
+                margin-left: 20px;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .page-2-heading2 {
+                font-size: 14px;
+                width: 70%;
+            }
+            .page-2-logo-img {
+                margin-top: -50px;
+            }
+
+            .page-5-box-layout p {
+                font-size: 10px;
+            }
+            .page-1-left-overlay {
+                margin-left: 20px !important;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .line2-img {
+                display: none;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
+  <section>
+<img
+        src="https://res.cloudinary.com/dlwk3jf73/image/upload/jllmoepvhbnwslchcy72"
+        class="line-img"
+/>
+<div class="home-page-1-layout">
     <img
-      src="https://res.cloudinary.com/dlwk3jf73/image/upload/jllmoepvhbnwslchcy72"
-      class="line-img"
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+            class="page-1-header-icon"
+            alt="logo"
     />
-    <div class="home-page-1-layout">
-      <img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-        class="page-1-header-icon"
-        alt="logo"
-      />
-      <div class="home-page-1-header-layout">
+    <div class="home-page-1-header-layout">
         <p>Persönlicher Vorschlag für</p>
-      </div>
-      <div class="page-1-grey-overlay">
+    </div>
+    <div class="page-1-grey-overlay">
         <div>
-          <h1 class="page-1-heading1">Tine Wittler</h1>
-          <div class="page-1-flex-overlay">
-            <p class="home-page-1-subtitle">Kundenstraße 100</p>
-            <p class="home-page-1-subtitle">22022 Kundenstadt</p>
-          </div>
+            <h1 class="page-1-heading1">${kunde.vorName +" "+ kunde.nachName }</h1>
+            <div class="page-1-flex-overlay">
+                <p class="home-page-1-subtitle">${kunde.strasse +" "+ kunde.hausNr}</p>
+                <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt ?string}</p>
+            </div>
         </div>
         <div>
-          <h4 class="page-1-heading2">Kontakt</h4>
-          <div class="page-1-flex-overlay">
-            <p class="home-page-1-subtitle">+49 171 12 23 34 45</p>
-            <p class="home-page-1-subtitle">tine.wittler@musteradresse.com</p>
-          </div>
+            <h4 class="page-1-heading2">Kontakt</h4>
+            <div class="page-1-flex-overlay">
+                <p class="home-page-1-subtitle">${kunde.telefon}</p>
+                <p class="home-page-1-subtitle">${kunde.email}</p>
+            </div>
         </div>
-      </div>
-      <div class="page-1-left-overlay">
+    </div>
+    <div class="page-1-left-overlay">
         <h1 class="page-1-heading3">
-          Am <span> 15.10.2023</span> überreicht durch
+            Am <span> ${datum ? date}</span> überreicht durch
         </h1>
         <div class="dispaly-flex">
-          <div class="flex-0-5">
-            <img
-              src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-              alt="SWR"
-            />
-          </div>
-          <div class="flex-1">
-            <div class="mb-20">
-              <h1 class="page-1-heading5">Windig & Knebel</h1>
-              <p class="home-page-1-subtitle">Versicherungsberatung AG</p>
-              <p class="home-page-1-subtitle">Musterstraße 1</p>
-              <p class="home-page-1-subtitle">12345 Musterstadt</p>
+            <div class="flex-0-5">
+                <img
+                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                        alt="SWR"
+                />
             </div>
-            <div>
-              <h1 class="page-1-heading5">Ihr Ansprechpartner</h1>
-              <p class="home-page-1-subtitle">Sabine Schlau-Meier</p>
-              <p class="home-page-1-subtitle">+49 (0) 30 - 22 25 51 1</p>
-              <p class="home-page-1-subtitle">ssm@wk.ag</p>
+            <div class="flex-1">
+                <div>
+                    <h1 class="page-1-heading5">${agent.firmaName}</h1>
+                    <p class="home-page-1-subtitle">Versicherungsberatung AG</p>
+                    <p class="home-page-1-subtitle">${agent.strasse + " " + agent.hausNr } </p>
+                    <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt}</p>
+                </div>
+                <div>
+                    <h1 class="page-1-heading5">Ihr Ansprechpartner</h1>
+                    <p class="home-page-1-subtitle">${agent.name}</p>
+                    <p class="home-page-1-subtitle">${agent.telefon}</p>
+                    <p class="home-page-1-subtitle">${agent.email}</p>
+                </div>
+                <div>
+                    <img
+                            src="https://res.cloudinary.com/dlwk3jf73/image/upload/ccmod7eqavticjrjeoan.jpg"
+                            alt="signature"
+                            class="signature-img height-80 width-80"
+                    />
+                </div>
             </div>
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/ccmod7eqavticjrjeoan.jpg"
-                alt="signature"
-                class="signature-img height-80 width-80"
-              />
-            </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/rxwpnvyzzzbts7jlajtm.jpg"
-        alt="line"
-        class="line2-img"
-      />
     </div>
+    <img
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/rxwpnvyzzzbts7jlajtm.jpg"
+            alt="line"
+            class="line2-img"
+    />
+</div>
+</section>
+<div class="pagebreak"></div>
 
-    <div class="home-page-2-layout">
-      <img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-        class="page-logo"
-        alt="logo"
-        id="page-2-logo-img"
-      />
-      <img
-        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-        class="page-logo-right mr-80"
-        alt="logo"
-        id="page-2-logo-img"
-      />
-
-      <div class="home-page-2-header-layout">
-        <h1 class="page-2-heading1 bold-font">Wünsche & Bedürfnisse</h1>
-      </div>
-      <div class="home-page-2-grey-box-wrap">
-        <div>
-          <h1 class="page-2-heading2">
-            Folgendes Risiko soll versichert werden
-          </h1>
-          <img
+<section>
+<div class="home-page-2-layout">
+    <img
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+            class="page-logo"
             alt="logo"
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/p4duqc81z7ksrmcefjpi"
-            class="page-2-logo-img"
-          />
+            id="page-2-logo-img"
+    />
+    <img
+            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+            class="page-logo-right mr-80"
+            alt="logo"
+            id="page-2-logo-img"
+    />
+
+    <div class="home-page-2-header-layout">
+        <h1 class="page-2-heading1 bold-font">Wünsche & Bedürfnisse</h1>
+    </div>
+    <div class="home-page-2-grey-box-wrap">
+        <div>
+            <h1 class="page-2-heading2">
+                Folgendes Risiko soll versichert werden
+            </h1>
+            <img
+                    alt="logo"
+                    src="https://res.cloudinary.com/dlwk3jf73/image/upload/p4duqc81z7ksrmcefjpi"
+                    class="page-2-logo-img"
+            />
         </div>
         <div class="single-card-item">
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/qby0pjogqlkksb5klzdo.jpg"
-              alt="img-4"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
             <div>
-              <h1>Risikoleben</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  BUZ Beitragsbefreiung 2,59 €
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-
-              <div class="single-card-item-text-wrap-chip">
-                <p>Premium Risikoleben 9,59 €<span class="ml-5">+</span></p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-5"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>32,00 €</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>51,61 €</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page-2-box-overlay">
-        <div>
-          <h1 class="page-2-heading3 bold-font">
-            Folgende Grunddaten wurden erfasst
-          </h1>
-          <div class="page-2-main-box-overlay">
-            <div class="page-2-flex-wrap">
-              <h5>Geboren</h5>
-              <p>15.06.1987</p>
-            </div>
-            <div class="page-2-flex-wrap">
-              <h5>Versicherungsbeginn</h5>
-              <p>01.12.2023</p>
-            </div>
-            <div class="page-2-flex-wrap">
-              <h5>Dauer in Jahren</h5>
-              <p>30 Jahre</p>
-            </div>
-            <div class="page-2-flex-wrap">
-              <h5>Beitrag</h5>
-              <p>21,68 €</p>
-            </div>
-            <div class="page-2-flex-wrap">
-              <h5>Überschussverwendung</h5>
-              <p>---</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page-2-box-overlay">
-        <div>
-          <h5 class="page-2-heading3 bold-font">
-            Angaben zu Beruf und Risiken
-          </h5>
-          <div class="page-2-main-box-overlay">
-            <div class="page-2-flex-wrap">
-              <h5>Beschäftigungsverhältnis</h5>
-              <p>angestellt</p>
-            </div>
-            <div class="page-2-flex-wrap">
-              <h5>Beruf/ausgeübte Tätigkeit</h5>
-              <p>Tischler</p>
-            </div>
-            <div class="page-2-flex-wrap">
-              <h5>Höchster Bildungsabschluss</h5>
-              <p>Abitur</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="home-page-3-layout">
-      <img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-        class="page-logo mt-32"
-        alt="logo"
-      />
-      <img
-        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-        class="page-logo-right mr-80 mt-32"
-        alt="logo"
-      />
-      <div>
-        <h1 class="page-3- bold-font card-head font-32">
-          Folgende Leistungsinhalte wurden gewünscht
-        </h1>
-      </div>
-      <#list allBenefits as benefit>
-      <div class="page-3-single-overlay dispaly-flex">
-        <div class="page-3-single-left-overlay">
-          <h1 class="page-3-heading2">${benefit.benefitName}</h1>
-          <div class="horizontal-line"></div>
-          <#list benefit.childBenefits as childBenefit>
-          <p class="page-3-subtitle">
-            ${childBenefit.benefitName}
-          </p>
-          </#list>
-        </div>
-        <div class="fixed-horizontal-line"></div>
-        <div class="right-overlay-main-wrap">
-          <h1 class="page-3-heading2">gewünscht</h1>
-          <div class="mt-50">
-            <#list benefit.childBenefits as childBenefit>
-            <#if requiredBenefits?seq_contains(childBenefit.benefitId)>
-               <div>
                 <img
-                  src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/p8mkyoxi4yrlzcwaxxjn.jpg"
-                  alt="Yes"
-                  class="height-38 width-38"
+                        src=${requestedTariff.logo}
+                        alt="img-4"
                 />
-              </div>
-              <#else>
-              <div>
-                <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/ekdg0bthpds6qiyp0hmj.jpg"
-                alt="No"
-                class="height-38 width-38"
-                />
-              </div>
-              </#if>
-              </#list>
             </div>
-
-          </div>
-        </div>
-      </#list>
-
-    
-
-    </div>
-
-    <div class="home-page-4-layout">
-      <img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-        class="page-logo mt-32"
-        alt="logo"
-      />
-      <img
-        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-        class="page-logo-right mt-32"
-        alt="logo"
-      />
-      <div>
-        <h1 class="page-4-heading1">Produktempfehlung</h1>
-      </div>
-      <!-- Product List Starts  -->
-      <#list products as product>
-        <div class="single-card-item box-shadow-none">
-          <div>
-            <img src="${product.logo}" alt="img-1" />
-          </div>
-
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1
-                class="page-4-flex-single-overlay-header page-4-single-box-wrap-header"
-              >
-                ${product.name}
-              </h1>
+            <div class="single-card-item-text-wrap">
+                <div>
+                    <h1>${requestedTariff.name}</h1>
+                </div>
+                <div class="single-card-item-chip-text-wrap">
+                  <#list requestedTariff.additionals as additional>
+                    <div class="single-card-item-text-wrap-chip">
+                        <p>
+                            ${additional.name}
+                            <span class="ml-5">+</span>
+                        </p>
+                    </div>
+                  </#list>
+                </div>
             </div>
             <div>
-              <div>
-                <p class="page-4-flex-single-overlay-subtitle">
-                  ${product.info}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-2"
-            />
-          </div>
-          <div class="single-card-item-price-wrap">
-            <h1>${product.netto}</h1>
-            <div class="single-card-item-price">
-              <p>Mtl. max. Betrag</p>
-              <p>${product.brutto}</p>
-            </div>
-          </div>
-        </div>
-        <div class="bold-horizontal-line"></div>
-      </#list>
-      <!-- Product List Ends -->
-    </div>
-    <div class="pagebreak"></div>
-
-    <div class="home-page-5-layout">
-      <img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-        class="page-logo"
-        alt="logo"
-      />
-      <img
-        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-        class="page-logo-right"
-        alt="logo"
-      />
-      <div>
-        <h1 class="card-head">Tarif- und Leistungsanalyse</h1>
-      </div>
-      <div class="page-5-front-boxes-wrap dispaly-flex gap-16">
-        <div class="flex-1 visibility-none flex-1">
-          <p class="opacity-0">None</p>
-        </div>
-       <!-- Insurance Company List Starts -->
-       <#list products as product>
-       <div class="page-5-box-layout flex-2">
-         <div>
-           <img
-           src=${product.logo}
-           />
-           <p>${product.name}</p>
-           <p class="page-5-box-layout-para-box-1 font-bold">${product.netto}</p>
-          </div>
-        </div>
-        </#list>
-        <!-- Insurance Company List Ends -->
-      </div>
-      <button class="page-5-btn">
-        <p>Leistungsinhalte RisikoLeben</p>
-      </button>
-
-      <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="flex-1">
-            <#list allBenefits as benefit>
-            <div class="page-5-white-box-wrap" >
-                ${benefit.benefitName}
-            </div>
-            </#list>
-        </div>
-            <#list products as product>
-            <div class="flex-2">
-                <#list product.tariffBenefit as singleTariffBenefit>
-        <div class="page-5-grey-box-wrap">
-            <#if singleTariffBenefit.available>
-               <div>
                 <img
-                  src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-                  alt="Yes"
+                        src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+                        alt="img-5"
                 />
-              </div>
-              <#else>
-              <div>
-                <img
-                src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-                alt="No"
-                />
-              </div>
-              </#if>
-          <p>${singleTariffBenefit.info}</p>
-        </div>
-        </#list>
-        </div>
-        </#list>
-      </div>
-
-
-    </div>
-
-    <div class="pagebreak"></div>
-
-    <div class="cards-items-main-wrap home-page-6-overlay">
-      <img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-        class="page-logo"
-        alt="logo"
-      />
-      <img
-        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-        class="page-logo-right"
-        alt="logo"
-      />
-      <h1 class="card-head">Ergebnisse</h1>
-      <div class="cards-item-wrap">
-        <!-- Ends Product List Starts -->
-        <#list products as product>
-        <div class="single-card-item">
-          <div>
-            <img
-              src=${product.logo}
-              alt="img-1"
-            />
-          </div>
-          <div class="single-card-item-text-wrap">
-            <div>
-              <h1>${product.name}</h1>
-            </div>
-            <div class="single-card-item-chip-text-wrap">
-            <#list product.additionals as additional>
-              <div class="single-card-item-text-wrap-chip">
-                <p>
-                  ${additional.name}
-                  <span class="ml-5">+</span>
-                </p>
-              </div>
-              </#list> 
-            </div>
-
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
-              alt="img-2"
-              />
             </div>
             <div class="single-card-item-price-wrap">
-              <h1>${product.netto}</h1>
-              <div class="single-card-item-price">
-                <p>Mtl. max. Betrag</p>
-                <p>${product.brutto}</p>
-              </div>
+                <h1>${requestedTariff.netto}</h1>
+                <div class="single-card-item-price">
+                    <p>Mtl. max. Betrag</p>
+                    <p>${requestedTariff.brutto}</p>
+                </div>
             </div>
-          </div>
-          </#list>
-          <!-- Ends Product List Ends -->
-      </div>
+        </div>
     </div>
-  </body>
+
+    <div class="page-2-box-overlay">
+        <div>
+            <h1 class="page-2-heading3 bold-font">
+                Folgende Grunddaten wurden erfasst
+            </h1>
+            <div class="page-2-main-box-overlay">
+                <div class="page-2-flex-wrap">
+                    <h5>Geboren</h5>
+                    <p>${kunde.geborn ?date}</p>
+                </div>
+                <div class="page-2-flex-wrap">
+                    <h5>Versicherungsbeginn</h5>
+                    <p>${kunde.versicherungsBeginn ?date}</p>
+                </div>
+                <div class="page-2-flex-wrap">
+                    <h5>Dauer in Jahren</h5>
+                    <p>${kunde.dauerInJahr}</p>
+                </div>
+                <div class="page-2-flex-wrap">
+                    <h5>Beitrag</h5>
+                    <p>${kunde.beitrag ?double } €</p>
+                </div>
+                <div class="page-2-flex-wrap">
+                    <h5>Überschussverwendung</h5>
+                    <p>---</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-2-box-overlay">
+        <div>
+            <h5 class="page-2-heading3 bold-font">
+                Angaben zu Beruf und Risiken
+            </h5>
+            <div class="page-2-main-box-overlay">
+                <div class="page-2-flex-wrap">
+                    <h5>Beschäftigungsverhältnis</h5>
+                    <p>${kunde.beschaftigungsverhaltnis }</p>
+                </div>
+                <div class="page-2-flex-wrap">
+                    <h5>Beruf/ausgeübte Tätigkeit</h5>
+                    <p>${kunde.tatigkeit }</p>
+                </div>
+                <div class="page-2-flex-wrap">
+                    <h5>Höchster Bildungsabschluss</h5>
+                    <p>${kunde.bildungsabschluss }</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="pagebreak"></div>
+
+<section>
+
+<div class="home-page-3-layout">
+    <img
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+            class="page-logo mt-32"
+            alt="logo"
+    />
+    <img
+            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+            class="page-logo-right mr-80 mt-32"
+            alt="logo"
+    />
+    <div>
+        <h1 class="page-3- bold-font card-head font-32">
+            Folgende Leistungsinhalte wurden gewünscht
+        </h1>
+    </div>
+    <#list allBenefits as benefit>
+        <div class="page-3-single-overlay dispaly-flex">
+            <div class="page-3-single-left-overlay">
+                <h1 class="page-3-heading2">${benefit.benefitName}</h1>
+                <div class="horizontal-line"></div>
+                <#list benefit.childBenefits as childBenefit>
+                    <p class="page-3-subtitle">
+                        ${childBenefit.benefitName}
+                    </p>
+                </#list>
+            </div>
+            <div class="fixed-horizontal-line"></div>
+            <div class="right-overlay-main-wrap">
+                <h1 class="page-3-heading2">gewünscht</h1>
+                <div class="mt-50">
+                    <#list benefit.childBenefits as childBenefit>
+                        <#if requiredBenefits?seq_contains(childBenefit.benefitId)>
+                            <div>
+                                <img
+                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/p8mkyoxi4yrlzcwaxxjn.jpg"
+                                        alt="Yes"
+                                        class="height-38 width-38"
+                                />
+                            </div>
+                        <#else>
+                            <div>
+                                <img
+                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/ekdg0bthpds6qiyp0hmj.jpg"
+                                        alt="No"
+                                        class="height-38 width-38"
+                                />
+                            </div>
+                        </#if>
+                    </#list>
+                </div>
+
+            </div>
+        </div>
+    </#list>
+</div>
+</section>
+<div class="pagebreak"></div>
+
+<div class="home-page-4-layout">
+    <img
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+            class="page-logo mt-32"
+            alt="logo"
+    />
+    <img
+            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+            class="page-logo-right mt-32"
+            alt="logo"
+    />
+    <div>
+        <h1 class="page-4-heading1">Produktempfehlung</h1>
+    </div>
+    <#list products as product>
+        <div class="single-card-item box-shadow-none">
+            <div>
+                <img src="${product.logo}" alt="img-1" />
+            </div>
+
+            <div class="single-card-item-text-wrap">
+                <div>
+                    <h1
+                            class="page-4-flex-single-overlay-header page-4-single-box-wrap-header"
+                    >
+                        ${product.name}
+                    </h1>
+                </div>
+                <div>
+                    <div>
+                        <p class="page-4-flex-single-overlay-subtitle">
+                            ${product.info}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+              ${product.stars}
+              <#if product.stars == 1>
+              <div class="stars-flex-wrap">
+                <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                alt="img-2"
+                />
+              </div>
+              </#if>
+              <#if product.stars == 2>
+              <div class="stars-flex-wrap">
+                <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                alt="img-2"
+                />
+                <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                alt="img-2"
+                />
+              </div>
+              </#if>
+              <#if product.stars == 3>
+              <div class="stars-flex-wrap">
+                <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                alt="img-2"
+                />
+                <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                alt="img-2"
+                />
+                <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                alt="img-2"
+                />
+              </div>
+              </#if>
+
+            </div>
+            <div class="single-card-item-price-wrap">
+                <h1>${product.netto}</h1>
+                <div class="single-card-item-price">
+                    <p>Mtl. max. Betrag</p>
+                    <p>${product.brutto}</p>
+                </div>
+            </div>
+        </div>
+        <div class="bold-horizontal-line"></div>
+    </#list>
+    <!-- Product List Ends -->
+</div>
+<div class="pagebreak"></div>
+
+<section>
+
+<div class="home-page-5-layout">
+    <img
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+            class="page-logo"
+            alt="logo"
+    />
+    <img
+            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+            class="page-logo-right"
+            alt="logo"
+    />
+    <div>
+        <h1 class="card-head">Tarif- und Leistungsanalyse</h1>
+    </div>
+    <div class="page-5-front-boxes-wrap dispaly-flex gap-16">
+        <div class="flex-1 visibility-none flex-1">
+            <p class="opacity-0">None</p>
+        </div>
+        <!-- Insurance Company List Starts -->
+        <#list products as product>
+            <div class="page-5-box-layout flex-2">
+                <div>
+                    <img
+                            src=${product.logo}
+                    />
+                    <p>${product.name}</p>
+                    <p class="page-5-box-layout-para-box-1 font-bold">${product.netto}</p>
+                </div>
+            </div>
+        </#list>
+        <!-- Insurance Company List Ends -->
+    </div>
+    <button class="page-5-btn">
+        <p>Leistungsinhalte RisikoLeben</p>
+    </button>
+
+    <div class="page-5-flex-wrap common-flex-wrap">
+        <div class="flex-1">
+            <#list allBenefits as benefit>
+                <div class="page-5-white-box-wrap" >
+                    ${benefit.benefitName}
+                </div>
+            </#list>
+        </div>
+        <#list products as product>
+            <div class="flex-2">
+                <#list product.tariffBenefit as singleTariffBenefit>
+                    <div class="page-5-grey-box-wrap">
+                        <#if singleTariffBenefit.available>
+                            <div>
+                                <img
+                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
+                                        alt="Yes"
+                                />
+                            </div>
+                        <#else>
+                            <div>
+                                <img
+                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
+                                        alt="No"
+                                />
+                            </div>
+                        </#if>
+                        <p>${singleTariffBenefit.info}</p>
+                    </div>
+                </#list>
+            </div>
+        </#list>
+    </div>
+
+
+</div>
+</section>
+
+
+<div class="pagebreak"></div>
+
+<div class="cards-items-main-wrap home-page-6-overlay">
+    <img
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+            class="page-logo"
+            alt="logo"
+    />
+    <img
+            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+            class="page-logo-right"
+            alt="logo"
+    />
+    <h1 class="card-head">Ergebnisse</h1>
+    <div class="cards-item-wrap">
+        <!-- Ends Product List Starts -->
+        <#list products as product>
+            <div class="single-card-item">
+                <div>
+                    <img
+                            src=${product.logo}
+                            alt="img-1"
+                    />
+                </div>
+                <div class="single-card-item-text-wrap">
+                    <div>
+                        <h1>${product.name}</h1>
+                    </div>
+                    <div class="single-card-item-chip-text-wrap">
+                        <#list product.additionals as additional>
+                            <div class="single-card-item-text-wrap-chip">
+                                <p>
+                                    ${additional.name}
+                                    <span class="ml-5">+</span>
+                                </p>
+                            </div>
+                        </#list>
+                    </div>
+
+                </div>
+                <div>
+                    <img
+                            src="https://res.cloudinary.com/dkbngxj51/image/upload/e_improve:outdoor/home-page/alzqfmhxfuvtjhr2wnkl.jpg"
+                            alt="img-2"
+                    />
+                </div>
+                <div class="single-card-item-price-wrap">
+                    <h1>${product.netto}</h1>
+                    <div class="single-card-item-price">
+                        <p>Mtl. max. Betrag</p>
+                        <p>${product.brutto}</p>
+                    </div>
+                </div>
+            </div>
+        </#list>
+        <!-- Ends Product List Ends -->
+    </div>
+</div>
+</body>
 </html>
