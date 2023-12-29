@@ -1,5 +1,5 @@
 <!-- HTML TEMPLATE 1 STARTS -->
-<!--  <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -1754,7 +1754,7 @@
 <!-- HTML TEMPLATE 1 ENDS -->
 
 <!-- HTML TEMPLATE 2 STARTS -->
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -1841,6 +1841,10 @@
             display: flex !important;
         }
 
+        .fontBold{
+            font-weight: bold;
+        }
+
         .line-img {
             position: absolute;
             left: 50%;
@@ -1918,6 +1922,10 @@
             text-align: start;
         }
 
+        .lh-10{
+            line-height: 10px;
+        }
+
         .page-1-heading3 {
             font-family: "Space Grotesk", sans-serif;
             font-size: 20px;
@@ -1982,14 +1990,12 @@
             margin-left: -20px;
         }
 
-        /* Style the radio buttons */
         .form-check-input[type="radio"] {
             position: absolute;
             opacity: 0;
             display: none;
         }
 
-        /* Style the radio container */
         .form-check-input[type="radio"] + .form-check-label::before {
             content: "";
             display: inline-block;
@@ -2054,6 +2060,10 @@
             flex: 0.5 !important;
         }
 
+        .mt-55{
+            margin-top: 55px;
+        }
+
         .width-80 {
             width: 80px !important;
         }
@@ -2111,6 +2121,12 @@
             line-height: 36px;
             letter-spacing: 0em;
             color: #1b1c4d;
+        }
+        .w-116{
+            width: 116px;
+        }
+        .h-30{
+            height: 30px ;
         }
 
         .page-1-heading1 {
@@ -2358,10 +2374,9 @@
         />
         <img
                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-                class="page-logo-right"
+                class="page-logo-right w-116 h-30"
                 alt="logo"
                 id="page-2-logo-img"
-                style="width: 116px; height: 30px"
         />
     </div>
     <div class="page1">
@@ -2466,10 +2481,9 @@
         />
         <img
                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-                class="page-logo-right"
+                class="page-logo-right w-116 h-30"
                 alt="logo"
                 id="page-2-logo-img"
-                style="width: 116px; height: 30px"
         />
     </div>
 
@@ -2545,10 +2559,9 @@
         />
         <img
                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-                class="page-logo-right"
+                class="page-logo-right w-116 h-30"
                 alt="logo"
                 id="page-2-logo-img"
-                style="width: 116px; height: 30px"
         />
     </div>
     <div class="max-width">
@@ -2557,14 +2570,14 @@
             <h5 class="mb-4">
                 Die Beratung erfolgte für folgende zu versichernde Person(en)
             </h5>
-            <div style="line-height: 10px">
+            <div class="lh-10">
                 <p>${kunde.vorName +" "+ kunde.nachName  }</p>
                 <p>${kunde.strasse +" "+ kunde.hausNr }</p>
                 <p>${kunde.postleitzahl +" "+ kunde.stadt }</p>
             </div>
 
             <h5 class="mt-4 mb-4">Anlass der Beratung</h5>
-            <p style="font-weight: bold">Die Beratung erfolgte:</p>
+            <p  class="fontBold">Die Beratung erfolgte:</p>
             <div class="form-check mt-2">
                 <#if beratung.kundenInitiative>
                     <input class="form-check-input" type="radio" name="flexRadioDefault"
@@ -2630,10 +2643,9 @@
         />
         <img
                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-                class="page-logo-right"
+                class="page-logo-right w-116 h-30"
                 alt="logo"
                 id="page-2-logo-img"
-                style="width: 116px; height: 30px"
         />
     </div>
     <div class="max-width">
@@ -2729,10 +2741,9 @@
         />
         <img
                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-                class="page-logo-right"
+                class="page-logo-right w-116 h-30"
                 alt="logo"
                 id="page-2-logo-img"
-                style="width: 116px; height: 30px"
         />
     </div>
     <div class="max-width">
@@ -2825,7 +2836,7 @@
                 </label>
             </div>
 
-            <div style="margin-top: 55px" class="d-flex gap-3">
+            <div  class="d-flex gap-3 mt-55">
                 <div class="box w-100">
                     <p>${ratUndBegrundung.musterstadt}</p>
                     <div class="w-100 p-5">signature</div>
@@ -2843,3 +2854,5 @@
 </body>
 </html> 
 <!-- HTML TEMPLATE 2 ENDS -->
+
+
