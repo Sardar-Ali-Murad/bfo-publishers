@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!-- HTML TEMPLATE 1 STARTS -->
+<!--  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -34,9 +35,9 @@
 
         @media print {
             .pagebreak {
-              page-break-before: always;
-               clear: both;
-            } 
+                page-break-before: always;
+                clear: both;
+            }
         }
 
         .ml-5 {
@@ -96,7 +97,7 @@
         }
 
         .mb-16{
-          margin-bottom: 16px;
+            margin-bottom: 16px;
         }
 
         .height-80 {
@@ -1063,337 +1064,337 @@
 </head>
 <body>
 
-  <section>
-<img
-        src="https://res.cloudinary.com/dlwk3jf73/image/upload/jllmoepvhbnwslchcy72"
-        class="line-img"
-/>
-<div class="home-page-1-layout">
+<section>
     <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-            class="page-1-header-icon"
-            alt="logo"
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/jllmoepvhbnwslchcy72"
+            class="line-img"
     />
-    <div class="home-page-1-header-layout">
-        <p>Persönlicher Vorschlag für</p>
-    </div>
-    <div class="page-1-grey-overlay">
-        <div>
-            <h1 class="page-1-heading1">${kunde.vorName +" "+ kunde.nachName }</h1>
-            <div class="page-1-flex-overlay">
-                <p class="home-page-1-subtitle">${kunde.strasse +" "+ kunde.hausNr}</p>
-                <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt ?string}</p>
+    <div class="home-page-1-layout">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-1-header-icon"
+                alt="logo"
+        />
+        <div class="home-page-1-header-layout">
+            <p>Persönlicher Vorschlag für</p>
+        </div>
+        <div class="page-1-grey-overlay">
+            <div>
+                <h1 class="page-1-heading1">${kunde.vorName +" "+ kunde.nachName }</h1>
+                <div class="page-1-flex-overlay">
+                    <p class="home-page-1-subtitle">${kunde.strasse +" "+ kunde.hausNr}</p>
+                    <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt ?string}</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="page-1-heading2">Kontakt</h4>
+                <div class="page-1-flex-overlay">
+                    <p class="home-page-1-subtitle">${kunde.telefon}</p>
+                    <p class="home-page-1-subtitle">${kunde.email}</p>
+                </div>
             </div>
         </div>
-        <div>
-            <h4 class="page-1-heading2">Kontakt</h4>
-            <div class="page-1-flex-overlay">
-                <p class="home-page-1-subtitle">${kunde.telefon}</p>
-                <p class="home-page-1-subtitle">${kunde.email}</p>
-            </div>
-        </div>
-    </div>
-    <div class="page-1-left-overlay">
-        <h1 class="page-1-heading3">
-            Am <span> ${datum ? date}</span> überreicht durch
-        </h1>
-        <div class="dispaly-flex">
-            <div class="flex-0-5">
-                <img
-                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-                        alt="SWR"
-                />
-            </div>
-            <div class="flex-1">
-                <div>
-                    <h1 class="page-1-heading5">${agent.firmaName}</h1>
-                    <p class="home-page-1-subtitle">Versicherungsberatung AG</p>
-                    <p class="home-page-1-subtitle">${agent.strasse + " " + agent.hausNr } </p>
-                    <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt}</p>
-                </div>
-                <div>
-                    <h1 class="page-1-heading5">Ihr Ansprechpartner</h1>
-                    <p class="home-page-1-subtitle">${agent.name}</p>
-                    <p class="home-page-1-subtitle">${agent.telefon}</p>
-                    <p class="home-page-1-subtitle">${agent.email}</p>
-                </div>
-                <div>
+        <div class="page-1-left-overlay">
+            <h1 class="page-1-heading3">
+                Am <span> ${datum ? date}</span> überreicht durch
+            </h1>
+            <div class="dispaly-flex">
+                <div class="flex-0-5">
                     <img
-                            src="https://res.cloudinary.com/dlwk3jf73/image/upload/ccmod7eqavticjrjeoan.jpg"
-                            alt="signature"
-                            class="signature-img height-80 width-80"
+                            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                            alt="SWR"
                     />
                 </div>
+                <div class="flex-1">
+                    <div>
+                        <h1 class="page-1-heading5">${agent.firmaName}</h1>
+                        <p class="home-page-1-subtitle">Versicherungsberatung AG</p>
+                        <p class="home-page-1-subtitle">${agent.strasse + " " + agent.hausNr } </p>
+                        <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt}</p>
+                    </div>
+                    <div>
+                        <h1 class="page-1-heading5">Ihr Ansprechpartner</h1>
+                        <p class="home-page-1-subtitle">${agent.name}</p>
+                        <p class="home-page-1-subtitle">${agent.telefon}</p>
+                        <p class="home-page-1-subtitle">${agent.email}</p>
+                    </div>
+                    <div>
+                        <img
+                                src="https://res.cloudinary.com/dlwk3jf73/image/upload/ccmod7eqavticjrjeoan.jpg"
+                                alt="signature"
+                                class="signature-img height-80 width-80"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/rxwpnvyzzzbts7jlajtm.jpg"
+                alt="line"
+                class="line2-img"
+        />
     </div>
-    <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/rxwpnvyzzzbts7jlajtm.jpg"
-            alt="line"
-            class="line2-img"
-    />
-</div>
 </section>
 <div class="pagebreak"></div>
 
 <section>
-<div class="home-page-2-layout">
-    <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-            class="page-logo"
-            alt="logo"
-            id="page-2-logo-img"
-    />
-    <img
-            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-            class="page-logo-right mr-80"
-            alt="logo"
-            id="page-2-logo-img"
-    />
+    <div class="home-page-2-layout">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo"
+                alt="logo"
+                id="page-2-logo-img"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right mr-80"
+                alt="logo"
+                id="page-2-logo-img"
+        />
 
-    <div class="home-page-2-header-layout">
-        <h1 class="page-2-heading1 bold-font">Wünsche & Bedürfnisse</h1>
-    </div>
-    <div class="home-page-2-grey-box-wrap">
-        <div>
-            <h1 class="page-2-heading2">
-                Folgendes Risiko soll versichert werden
-            </h1>
-            <img
-                    alt="logo"
-                    src="https://res.cloudinary.com/dlwk3jf73/image/upload/p4duqc81z7ksrmcefjpi"
-                    class="page-2-logo-img"
-            />
+        <div class="home-page-2-header-layout">
+            <h1 class="page-2-heading1 bold-font">Wünsche & Bedürfnisse</h1>
         </div>
-        <div class="single-card-item">
+        <div class="home-page-2-grey-box-wrap">
             <div>
+                <h1 class="page-2-heading2">
+                    Folgendes Risiko soll versichert werden
+                </h1>
                 <img
-                        src=${requestedTariff.logo}
-                        alt="img-4"
+                        alt="logo"
+                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/p4duqc81z7ksrmcefjpi"
+                        class="page-2-logo-img"
                 />
             </div>
-            <div class="single-card-item-text-wrap">
+            <div class="single-card-item">
                 <div>
-                    <h1>${requestedTariff.name}</h1>
+                    <img
+                            src=${requestedTariff.logo}
+                            alt="img-4"
+                    />
                 </div>
-                <div class="single-card-item-chip-text-wrap">
-                  <#list requestedTariff.additionals as additional>
-                    <div class="single-card-item-text-wrap-chip">
-                        <p>
-                            ${additional.name}
-                            <span class="ml-5">+</span>
-                        </p>
+                <div class="single-card-item-text-wrap">
+                    <div>
+                        <h1>${requestedTariff.name}</h1>
                     </div>
-                  </#list>
-                </div>
-            </div>
-            <div>
-              <div>             
-                <#if requestedTariff.starNumber == 1>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
-                </#if>
-                <#if requestedTariff.starNumber == 2>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
-                </#if>
-                <#if requestedTariff.starNumber == 3>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
-                </#if>
-                <#if requestedTariff.starNumber == 4>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
-                </#if>
-                <#if requestedTariff.starNumber == 5>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
-                </#if>
-             </div>
-            </div>
-            <div class="single-card-item-price-wrap">
-                <h1>${requestedTariff.netto}</h1>
-                <div class="single-card-item-price">
-                    <p>Mtl. max. Betrag</p>
-                    <p>${requestedTariff.brutto}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-2-box-overlay">
-        <div>
-            <h1 class="page-2-heading3 bold-font">
-                Folgende Grunddaten wurden erfasst
-            </h1>
-            <div class="page-2-main-box-overlay">
-                <div class="page-2-flex-wrap">
-                    <h5>Geboren</h5>
-                    <p>${kunde.geborn ?date}</p>
-                </div>
-                <div class="page-2-flex-wrap">
-                    <h5>Versicherungsbeginn</h5>
-                    <p>${kunde.versicherungsBeginn ?date}</p>
-                </div>
-                <div class="page-2-flex-wrap">
-                    <h5>Dauer in Jahren</h5>
-                    <p>${kunde.dauerInJahr}</p>
-                </div>
-                <div class="page-2-flex-wrap">
-                    <h5>Beitrag</h5>
-                    <p>${kunde.beitrag ?double } €</p>
-                </div>
-                <div class="page-2-flex-wrap">
-                    <h5>Überschussverwendung</h5>
-                    <p>---</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="page-2-box-overlay">
-        <div>
-            <h5 class="page-2-heading3 bold-font">
-                Angaben zu Beruf und Risiken
-            </h5>
-            <div class="page-2-main-box-overlay">
-                <div class="page-2-flex-wrap">
-                    <h5>Beschäftigungsverhältnis</h5>
-                    <p>${kunde.beschaftigungsverhaltnis }</p>
-                </div>
-                <div class="page-2-flex-wrap">
-                    <h5>Beruf/ausgeübte Tätigkeit</h5>
-                    <p>${kunde.tatigkeit }</p>
-                </div>
-                <div class="page-2-flex-wrap">
-                    <h5>Höchster Bildungsabschluss</h5>
-                    <p>${kunde.bildungsabschluss }</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-<div class="pagebreak"></div>
-
-<section>
-
-<div class="home-page-3-layout">
-    <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-            class="page-logo mt-32"
-            alt="logo"
-    />
-    <img
-            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-            class="page-logo-right mr-80 mt-32"
-            alt="logo"
-    />
-    <div>
-        <h1 class="page-3- bold-font card-head font-32">
-            Folgende Leistungsinhalte wurden gewünscht
-        </h1>
-    </div>
-    <#list allBenefits as benefit>
-        <div class="page-3-single-overlay dispaly-flex">
-            <div class="page-3-single-left-overlay">
-                <h1 class="page-3-heading2">${benefit.benefitName}</h1>
-                <div class="horizontal-line"></div>
-                <#list benefit.childBenefits as childBenefit>
-                    <p class="page-3-subtitle">
-                        ${childBenefit.benefitName}
-                    </p>
-                </#list>
-            </div>
-            <div class="fixed-horizontal-line"></div>
-            <div class="right-overlay-main-wrap">
-                <h1 class="page-3-heading2">gewünscht</h1>
-                <div class="mt-50">
-                    <#list benefit.childBenefits as childBenefit>
-                        <#if requiredBenefits?seq_contains(childBenefit.benefitId)>
-                            <div class="mb-16">
-                                <img
-                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/p8mkyoxi4yrlzcwaxxjn.jpg"
-                                        alt="Yes"
-                                        class="height-38 width-38"
-                                />
+                    <div class="single-card-item-chip-text-wrap">
+                        <#list requestedTariff.additionals as additional>
+                            <div class="single-card-item-text-wrap-chip">
+                                <p>
+                                    ${additional.name}
+                                    <span class="ml-5">+</span>
+                                </p>
                             </div>
-                        <#else>
-                            <div class="mb-16">
+                        </#list>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <#if requestedTariff.starNumber == 1>
+                            <div class="stars-flex-wrap">
                                 <img
-                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/ekdg0bthpds6qiyp0hmj.jpg"
-                                        alt="No"
-                                        class="height-38 width-38"
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
                                 />
                             </div>
                         </#if>
-                    </#list>
+                        <#if requestedTariff.starNumber == 2>
+                            <div class="stars-flex-wrap">
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                            </div>
+                        </#if>
+                        <#if requestedTariff.starNumber == 3>
+                            <div class="stars-flex-wrap">
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                            </div>
+                        </#if>
+                        <#if requestedTariff.starNumber == 4>
+                            <div class="stars-flex-wrap">
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                            </div>
+                        </#if>
+                        <#if requestedTariff.starNumber == 5>
+                            <div class="stars-flex-wrap">
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                                <img
+                                        src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                        alt="img-2"
+                                />
+                            </div>
+                        </#if>
+                    </div>
                 </div>
-
+                <div class="single-card-item-price-wrap">
+                    <h1>${requestedTariff.netto}</h1>
+                    <div class="single-card-item-price">
+                        <p>Mtl. max. Betrag</p>
+                        <p>${requestedTariff.brutto}</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </#list>
-</div>
+
+        <div class="page-2-box-overlay">
+            <div>
+                <h1 class="page-2-heading3 bold-font">
+                    Folgende Grunddaten wurden erfasst
+                </h1>
+                <div class="page-2-main-box-overlay">
+                    <div class="page-2-flex-wrap">
+                        <h5>Geboren</h5>
+                        <p>${kunde.geborn ?date}</p>
+                    </div>
+                    <div class="page-2-flex-wrap">
+                        <h5>Versicherungsbeginn</h5>
+                        <p>${kunde.versicherungsBeginn ?date}</p>
+                    </div>
+                    <div class="page-2-flex-wrap">
+                        <h5>Dauer in Jahren</h5>
+                        <p>${kunde.dauerInJahr}</p>
+                    </div>
+                    <div class="page-2-flex-wrap">
+                        <h5>Beitrag</h5>
+                        <p>${kunde.beitrag ?double } €</p>
+                    </div>
+                    <div class="page-2-flex-wrap">
+                        <h5>Überschussverwendung</h5>
+                        <p>---</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-2-box-overlay">
+            <div>
+                <h5 class="page-2-heading3 bold-font">
+                    Angaben zu Beruf und Risiken
+                </h5>
+                <div class="page-2-main-box-overlay">
+                    <div class="page-2-flex-wrap">
+                        <h5>Beschäftigungsverhältnis</h5>
+                        <p>${kunde.beschaftigungsverhaltnis }</p>
+                    </div>
+                    <div class="page-2-flex-wrap">
+                        <h5>Beruf/ausgeübte Tätigkeit</h5>
+                        <p>${kunde.tatigkeit }</p>
+                    </div>
+                    <div class="page-2-flex-wrap">
+                        <h5>Höchster Bildungsabschluss</h5>
+                        <p>${kunde.bildungsabschluss }</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="pagebreak"></div>
+
+<section>
+
+    <div class="home-page-3-layout">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo mt-32"
+                alt="logo"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right mr-80 mt-32"
+                alt="logo"
+        />
+        <div>
+            <h1 class="page-3- bold-font card-head font-32">
+                Folgende Leistungsinhalte wurden gewünscht
+            </h1>
+        </div>
+        <#list allBenefits as benefit>
+            <div class="page-3-single-overlay dispaly-flex">
+                <div class="page-3-single-left-overlay">
+                    <h1 class="page-3-heading2">${benefit.benefitName}</h1>
+                    <div class="horizontal-line"></div>
+                    <#list benefit.childBenefits as childBenefit>
+                        <p class="page-3-subtitle">
+                            ${childBenefit.benefitName}
+                        </p>
+                    </#list>
+                </div>
+                <div class="fixed-horizontal-line"></div>
+                <div class="right-overlay-main-wrap">
+                    <h1 class="page-3-heading2">gewünscht</h1>
+                    <div class="mt-50">
+                        <#list benefit.childBenefits as childBenefit>
+                            <#if requiredBenefits?seq_contains(childBenefit.benefitId)>
+                                <div class="mb-16">
+                                    <img
+                                            src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/p8mkyoxi4yrlzcwaxxjn.jpg"
+                                            alt="Yes"
+                                            class="height-38 width-38"
+                                    />
+                                </div>
+                            <#else>
+                                <div class="mb-16">
+                                    <img
+                                            src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/ekdg0bthpds6qiyp0hmj.jpg"
+                                            alt="No"
+                                            class="height-38 width-38"
+                                    />
+                                </div>
+                            </#if>
+                        </#list>
+                    </div>
+
+                </div>
+            </div>
+        </#list>
+    </div>
 </section>
 <div class="pagebreak"></div>
 
@@ -1433,87 +1434,87 @@
                     </div>
                 </div>
             </div>
-            <div>             
-               <#if product.starNumber == 1>
-               <div class="stars-flex-wrap">
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-               </div>
-               </#if>
-               <#if product.starNumber == 2>
-               <div class="stars-flex-wrap">
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-               </div>
-               </#if>
-               <#if product.starNumber == 3>
-               <div class="stars-flex-wrap">
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-               </div>
-               </#if>
-               <#if product.starNumber == 4>
-               <div class="stars-flex-wrap">
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-               </div>
-               </#if>
-               <#if product.starNumber == 5>
-               <div class="stars-flex-wrap">
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-                 <img
-                 src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                 alt="img-2"
-                 />
-               </div>
-               </#if>
+            <div>
+                <#if product.starNumber == 1>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
+                </#if>
+                <#if product.starNumber == 2>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
+                </#if>
+                <#if product.starNumber == 3>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
+                </#if>
+                <#if product.starNumber == 4>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
+                </#if>
+                <#if product.starNumber == 5>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
+                </#if>
             </div>
             <div class="single-card-item-price-wrap">
                 <h1>${product.netto}</h1>
@@ -1530,79 +1531,91 @@
 
 <section>
 
-<div class="home-page-5-layout">
-    <img
-            src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
-            class="page-logo"
-            alt="logo"
-    />
-    <img
-            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
-            class="page-logo-right"
-            alt="logo"
-    />
-    <div>
-        <h1 class="card-head">Tarif- und Leistungsanalyse</h1>
-    </div>
-    <div class="page-5-front-boxes-wrap dispaly-flex gap-16">
-        <div class="flex-1 visibility-none flex-1">
-            <p class="opacity-0">None</p>
+    <div class="home-page-5-layout">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo"
+                alt="logo"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right"
+                alt="logo"
+        />
+        <div>
+            <h1 class="card-head">Tarif- und Leistungsanalyse</h1>
         </div>
-        <#list products as product>
-            <div class="page-5-box-layout flex-2">
-                <div>
-                    <img
-                            src=${product.logo}
-                    />
-                    <p>${product.name}</p>
-                    <p class="page-5-box-layout-para-box-1 font-bold">${product.netto}</p>
-                </div>
+        <div class="page-5-front-boxes-wrap dispaly-flex gap-16">
+            <div class="flex-1 visibility-none flex-1">
+                <p class="opacity-0">None</p>
             </div>
-        </#list>
-    </div>
-    <#list allBenefits as benefit>
-    <button class="page-5-btn">
-      <p>${benefit.benefitName}</p>
-    </button>
-
-    <div class="page-5-flex-wrap common-flex-wrap">
-        <div class="flex-1">
-            <#list benefit.childBenefits as childBenefits>
-                <div class="page-5-white-box-wrap" >
-                    ${childBenefits.benefitName}
+            <#list products as product>
+                <div class="page-5-box-layout flex-2">
+                    <div>
+                        <img
+                                src=${product.logo}
+                        />
+                        <p>${product.name}</p>
+                        <p class="page-5-box-layout-para-box-1 font-bold">${product.netto}</p>
+                    </div>
                 </div>
             </#list>
         </div>
-        <#list products as product>
-            <div class="flex-2">
-                <#list product.tariffBenefit as singleTariffBenefit>
-                    <div class="page-5-grey-box-wrap">
-                        <#if singleTariffBenefit.available>
-                            <div>
-                                <img
-                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
-                                        alt="Yes"
-                                />
+        <#list allBenefits as benefit>
+            <button class="page-5-btn">
+                <p>${benefit.benefitName}</p>
+            </button>
+
+            <div class="page-5-flex-wrap common-flex-wrap">
+                <div class="flex-1">
+                    <#list benefit.childBenefits as childBenefits>
+                        <div class="page-5-white-box-wrap" >
+                            ${childBenefits.benefitName}
+                        </div>
+                    </#list>
+                </div>
+                <#if benefit?index == 0>
+                <#list products as product>
+                    <div class="flex-2">
+                        <#list product.tariffBenefit as singleTariffBenefit>
+                            <div class="page-5-grey-box-wrap">
+                                <#if singleTariffBenefit.available>
+                                    <div>
+                                        <img
+                                                src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/jgtg1brnljgvms85vpem"
+                                                alt="Yes"
+                                        />
+                                    </div>
+                                <#else>
+                                    <div>
+                                        <img
+                                                src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
+                                                alt="No"
+                                        />
+                                    </div>
+                                </#if>
+                                <p>${singleTariffBenefit.info}</p>
                             </div>
-                        <#else>
-                            <div>
-                                <img
-                                        src="https://res.cloudinary.com/dlwk3jf73/image/upload/v1/action/ls5apctblcvakxojblct"
-                                        alt="No"
-                                />
-                            </div>
-                        </#if>
-                        <p>${singleTariffBenefit.info}</p>
+                        </#list>
                     </div>
                 </#list>
+                <#else>
+                <#list products as product>
+                <div class="flex-2">
+                    <#list product.tariffBenefit as singleTariffBenefit>
+                    <div class="page-5-grey-box-wrap">
+                            
+                        </div>
+                    </#list>
+                </div>
+                </#list>
+                </#if>
             </div>
         </#list>
+
+
+
     </div>
-    </#list>
-
-
-
-</div>
 </section>
 
 
@@ -1645,86 +1658,85 @@
                     </div>
 
                 </div>
-                <!-- Stars -->
                 <#if product.starNumber == 1>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
                 </#if>
                 <#if product.starNumber == 2>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
                 </#if>
                 <#if product.starNumber == 3>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
                 </#if>
                 <#if product.starNumber == 4>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
                 </#if>
                 <#if product.starNumber == 5>
-                <div class="stars-flex-wrap">
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                  <img
-                  src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
-                  alt="img-2"
-                  />
-                </div>
+                    <div class="stars-flex-wrap">
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                        <img
+                                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/star/gq89g3b2iazmhaufh0ql.jpg"
+                                alt="img-2"
+                        />
+                    </div>
                 </#if>
                 <div class="single-card-item-price-wrap">
                     <h1>${product.netto}</h1>
@@ -1738,4 +1750,1096 @@
     </div>
 </div>
 </body>
-</html>
+</html>  -->
+<!-- HTML TEMPLATE 1 ENDS -->
+
+<!-- HTML TEMPLATE 2 STARTS -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+    />
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index2.css" />
+    <title>Comparit</title>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Arimo&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+    />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #1b1c4d;
+            font-family: "Arimo", sans-serif !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .max-width {
+            max-width: 1100px;
+        }
+
+        @media print {
+            .pagebreak {
+                page-break-before: always;
+                clear: both;
+            }
+        }
+
+        .fixed-horizontal-line {
+            height: 200px;
+            width: 1px;
+            background-color: #1b1c4d33;
+        }
+
+        .page-1-header-icon {
+            margin-top: 32px;
+            margin-left: 70px;
+        }
+
+        .home-page-1-layout {
+            position: relative;
+        }
+
+        .flex-0-5 {
+            flex: 0.5 !important;
+        }
+
+        .width-80 {
+            width: 80px !important;
+        }
+
+        .height-80 {
+            height: 80px !important;
+        }
+
+        .dispaly-flex {
+            display: flex !important;
+        }
+
+        .line-img {
+            position: absolute;
+            left: 50%;
+        }
+
+        .page-logo-right {
+            float: right;
+        }
+
+        .line2-img {
+            position: absolute;
+            bottom: -30px;
+            left: -280px;
+        }
+
+        .home-page-1-header-layout {
+            margin-left: 80px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 56px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0ab7a7;
+            margin-top: 100px;
+        }
+
+        .page-1-grey-overlay {
+            padding: 15px 80px;
+            background-color: #1b1c4d14;
+            width: 60%;
+            margin-top: 30px;
+        }
+
+        .home-page-1-subtitle {
+            font-family: "Arimo", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 0em;
+            color: #1b1c4d;
+        }
+
+        .page-1-heading1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .page-1-heading2 {
+            font-family: "Arimo", sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .page-1-flex-overlay {
+            margin-bottom: 20px;
+        }
+
+        .page-1-left-overlay {
+            margin-top: 50px;
+            margin-right: 80px;
+            width: 75% !important;
+            position: relative;
+            z-index: 10;
+            margin-left: 45%;
+            text-align: start;
+        }
+
+        .page-1-heading3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: right;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: start;
+            color: #1b1c4d;
+            margin-bottom: 30px;
+        }
+
+        .page-1-heading3 span {
+            color: #1b1c4d66;
+            text-decoration: underline;
+        }
+
+        .page-1-heading4 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0em;
+            color: #1b1c4d !important;
+            margin-bottom: 24px;
+        }
+
+        .page-1-heading5 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            color: #1b1c4d;
+            margin-bottom: 0px;
+        }
+
+        .card-section .container-fluid {
+            background: #1b1c4d11;
+            border-radius: 0;
+            border: 1px solid rgb(209, 209, 209);
+            padding: 5px 50px;
+        }
+
+        .insurance-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .insurance-list li {
+            margin-bottom: 5px;
+            margin-top: 5px;
+            line-height: 22px;
+        }
+
+        .form-check {
+            margin-left: -20px;
+        }
+
+        /* Style the radio buttons */
+        .form-check-input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            display: none;
+        }
+
+        /* Style the radio container */
+        .form-check-input[type="radio"] + .form-check-label::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 2px solid #e2e2e2;
+            border-radius: 50%;
+            position: relative;
+            top: 5px;
+        }
+
+        .form-check-input[type="radio"]:checked + .form-check-label::before {
+            background-color: #09b6a7;
+        }
+
+        .page2 {
+            line-height: 30px;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #09b6a7;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border-radius: 3px;
+            transform: translateY(5px);
+        }
+
+        .page4 .box {
+            border: 1px solid rgb(236, 236, 236);
+            border-radius: 5px;
+            background: #09b6a809;
+        }
+
+        .page4 .box p {
+            font-size: 1.1rem;
+        }
+
+        .page5 .box div {
+            border-radius: 5px;
+            background: #ededf1;
+            color: #1b1c4d33;
+        }
+
+        .fixed-horizontal-line {
+            height: 200px;
+            width: 1px;
+            background-color: #1b1c4d33;
+        }
+
+        .page-1-header-icon {
+            margin-top: 32px;
+            margin-left: 70px;
+        }
+
+        .home-page-1-layout {
+            position: relative;
+        }
+
+        .flex-0-5 {
+            flex: 0.5 !important;
+        }
+
+        .width-80 {
+            width: 80px !important;
+        }
+
+        .height-80 {
+            height: 80px !important;
+        }
+
+        .dispaly-flex {
+            display: flex !important;
+        }
+
+        .line-img {
+            position: absolute;
+            left: 50%;
+        }
+
+        .page-logo-right {
+            float: right;
+        }
+
+        .mt-32 {
+            margin-top: 32px;
+        }
+
+        .line2-img {
+            position: absolute;
+            bottom: 0px;
+            left: -280px;
+        }
+
+        .home-page-1-header-layout {
+            margin-left: 80px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 56px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0ab7a7;
+            margin-top: 40px;
+        }
+
+        .page-1-grey-overlay {
+            padding: 15px 80px;
+            background-color: #1b1c4d14;
+            width: 60%;
+            margin-top: 30px;
+        }
+
+        .home-page-1-subtitle {
+            font-family: "Arimo", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 0em;
+            color: #1b1c4d;
+        }
+
+        .page-1-heading1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .page-1-heading2 {
+            font-family: "Arimo", sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1b1c4d;
+        }
+
+        .page-1-flex-overlay {
+            margin-bottom: 5px;
+        }
+
+        .page-1-left-overlay {
+            margin-top: 50px;
+            margin-right: 80px;
+            width: 75% !important;
+            position: relative;
+            z-index: 10;
+            margin-left: 45%;
+            text-align: start;
+        }
+
+        .page-1-heading3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: right;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: start;
+            color: #1b1c4d;
+            margin-bottom: 10px;
+        }
+
+        .page-1-heading3 span {
+            color: #1b1c4d66;
+            text-decoration: underline;
+        }
+
+        .page-1-heading4 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0em;
+            color: #1b1c4d !important;
+            margin-bottom: 24px;
+        }
+
+        .page-1-heading5 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            color: #1b1c4d;
+            margin-bottom: 0px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .line-img {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            .page-1-grey-overlay {
+                width: 70% !important;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .page-1-grey-overlay {
+                width: 90% !important;
+                padding-left: 20px;
+            }
+
+            .home-page-1-subtitle {
+                font-size: 16px;
+            }
+
+            .home-page-1-header-layout {
+                margin-top: 150px;
+            }
+
+            .home-page-1-header-layout {
+                font-size: 18px;
+                margin-left: 20px;
+            }
+
+            .page-1-header-icon {
+                margin-left: 20px;
+            }
+
+            .page-1-left-overlay {
+                width: 50%;
+                margin-left: 60%;
+            }
+
+            .page-1-heading3 {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+
+            .page-1-heading5 {
+                font-size: 14px;
+            }
+
+            .home-page-1-subtitle {
+                font-size: 13px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .page-1-heading3 {
+                font-size: 20px;
+            }
+
+            .page-1-left-overlay {
+                margin-left: 20% !important;
+            }
+
+            .page-1-left-overlay {
+                margin-left: 35%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .page-1-left-overlay {
+                margin-left: 20px !important;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .line2-img {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section>
+    <img
+            src="https://res.cloudinary.com/dlwk3jf73/image/upload/jllmoepvhbnwslchcy72"
+            class="line-img"
+    />
+    <div class="home-page-1-layout">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-1-header-icon"
+                alt="logo"
+        />
+        <div class="home-page-1-header-layout">
+            <p>Persönlicher Vorschlag für</p>
+        </div>
+        <div class="page-1-grey-overlay">
+            <div>
+                <h1 class="page-1-heading1">${kunde.vorName +" "+ kunde.nachName }</h1>
+                <div class="page-1-flex-overlay">
+                    <p class="home-page-1-subtitle">${kunde.strasse +" "+ kunde.hausNr}</p>
+                    <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt ?string}</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="page-1-heading2">Kontakt</h4>
+                <div class="page-1-flex-overlay">
+                    <p class="home-page-1-subtitle">${kunde.telefon}</p>
+                    <p class="home-page-1-subtitle">${kunde.email}</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-1-left-overlay">
+            <h1 class="page-1-heading3">
+                Am <span> ${datum ? date}</span> überreicht durch
+            </h1>
+            <div class="dispaly-flex">
+                <div class="flex-0-5">
+                    <img
+                            src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                            alt="SWR"
+                    />
+                </div>
+                <div class="flex-1">
+                    <div>
+                        <h1 class="page-1-heading5">${agent.firmaName}</h1>
+                        <p class="home-page-1-subtitle">Versicherungsberatung AG</p>
+                        <p class="home-page-1-subtitle">${agent.strasse + " " + agent.hausNr } </p>
+                        <p class="home-page-1-subtitle">${kunde.postleitzahl +" "+ kunde.stadt}</p>
+                    </div>
+                    <div>
+                        <h1 class="page-1-heading5">Ihr Ansprechpartner</h1>
+                        <p class="home-page-1-subtitle">${agent.name}</p>
+                        <p class="home-page-1-subtitle">${agent.telefon}</p>
+                        <p class="home-page-1-subtitle">${agent.email}</p>
+                    </div>
+                    <div>
+                        <img
+                                src="https://res.cloudinary.com/dlwk3jf73/image/upload/ccmod7eqavticjrjeoan.jpg"
+                                alt="signature"
+                                class="signature-img height-80 width-80"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/e_improve:outdoor/rxwpnvyzzzbts7jlajtm.jpg"
+                alt="line"
+                class="line2-img"
+        />
+    </div>
+</section>
+<div class="pagebreak"></div>
+
+<section class="p-5 mb-5">
+    <div class="d-flex justify-content-between mb-5">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo"
+                alt="logo"
+                id="page-2-logo-img"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right"
+                alt="logo"
+                id="page-2-logo-img"
+                style="width: 116px; height: 30px"
+        />
+    </div>
+    <div class="page1">
+        <div class="max-width">
+
+            <h3>Beratungsgrundlage</h3>
+            <h5 class="mt-5 mb-2">
+                Der Beratung liegt folgende Marktuntersuchung zugrunde
+            </h5>
+            <form>
+                <div class="form-check">
+                    <#if beratung.marktuntersuchung>
+                        <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault1"
+                                checked
+                        />
+                    <#else>
+                        <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault1"
+                        />
+                    </#if>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Der Vermittler stützt seinen Rat auf eine objektive, ausgewogene
+                        Marktuntersuchung
+                    </label>
+                </div>
+                <div class="form-check">
+                    <#if beratung.versicherern>
+                        <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault2"
+                                checked
+                        />
+                    <#else>
+                        <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault2"
+                        />
+                    </#if>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Der Vermittler stützt seinen/ihren Rat auf eine beschränkte
+                        Anzahl von Versicherern (nach Alphabet):
+                    </label>
+                </div>
+
+                <div class="card-section w-100 mt-3">
+                    <div class="container-fluid">
+                        <ul class="insurance-list">
+                            <#list beratung.versicherernList as singleVersicherernList>
+                                <p>${singleVersicherernList.name}</p>
+                            </#list>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-check mt-3">
+                    <#if beratung.verzichtetAufDasRecht>
+
+                        <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault2"
+                                id="flexRadioDefault3"
+                                checked
+                        />
+                    <#else>
+                        <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault2"
+                                id="flexRadioDefault3"
+                        />
+                    </#if>
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Der Kunde/die Kundin verzichtet auf das Recht, die Namen der
+                        Versicherer, die der Beratung zugrunde liegen, zu verlangen
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<div class="pagebreak"></div>
+
+<section class="px-5 mb-5 mt-32">
+    <div class="d-flex justify-content-between mb-5">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo"
+                alt="logo"
+                id="page-2-logo-img"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right"
+                alt="logo"
+                id="page-2-logo-img"
+                style="width: 116px; height: 30px"
+        />
+    </div>
+
+    <div class="page2">
+        <div class="max-width">
+            <h3 class="mt-5 mb-5">Hinweise</h3>
+            <ol>
+                <li>
+                    Die Empfehlung beruht auf einer eingeschränkten
+                    Beratungsgrundlage. Damit wurde der Marktanalyse keine
+                    vollständige Anzahl von auf dem Markt angebotenen
+                    Versicherungsverträgen und Versicherungen zugrunde gelegt. Sie
+                    weicht in diesem Fall vom gesetzlichen Regelfall gemäß § 60 Abs. 1
+                    VVG ab.
+                </li>
+            </ol>
+
+            <div>
+                <label>
+                    <#if hinweis.anbindungenZuVersicherern>
+                        <input type="checkbox" checked />
+                    <#else>
+                        <input type="checkbox"  />
+                    </#if>
+                    Eigenen Anbindungen zu Versicherern
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <#if hinweis.maklerPoolOderVerbundVonMaklern>
+                        <input type="checkbox" checked />
+                    <#else>
+                        <input type="checkbox"  />
+                    </#if>
+                    Anbindung von Maklerpool oder Verbund von Maklern
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <#if hinweis.cpitVergleichsprogramm>
+                        <input type="checkbox" checked />
+                    <#else>
+                        <input type="checkbox"  />
+                    </#if>
+                    cpit Vergleichsprogramm
+                </label>
+            </div>
+
+            <ol class="mt-4" start="2">
+                <li>
+                    Die Informationen zu den berücksichtigten Versicherungen und
+                    Versicherungsverträgen habe ich aus folgenden Quellen:
+                </li>
+                <li>
+                    Eine Einordnung zum Marktanteil des jeweiligen Versicherers gibt
+                    die öffentlich zugängliche Jahresstatistik der Bafin. Link
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+<div class="pagebreak"></div>
+
+<section class="px-5 mb-5">
+    <div class="d-flex justify-content-between mb-5">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo"
+                alt="logo"
+                id="page-2-logo-img"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right"
+                alt="logo"
+                id="page-2-logo-img"
+                style="width: 116px; height: 30px"
+        />
+    </div>
+    <div class="max-width">
+        <div class="page3">
+            <h3 class="mt-5 mb-5">Angaben zur Beratung</h3>
+            <h5 class="mb-4">
+                Die Beratung erfolgte für folgende zu versichernde Person(en)
+            </h5>
+            <div style="line-height: 10px">
+                <p>${kunde.vorName +" "+ kunde.nachName  }</p>
+                <p>${kunde.strasse +" "+ kunde.hausNr }</p>
+                <p>${kunde.postleitzahl +" "+ kunde.stadt }</p>
+            </div>
+
+            <h5 class="mt-4 mb-4">Anlass der Beratung</h5>
+            <p style="font-weight: bold">Die Beratung erfolgte:</p>
+            <div class="form-check mt-2">
+                <#if beratung.kundenInitiative>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault1" checked />
+                <#else>
+                    <input class="form-check-input" type="radio"  checked="false"  name="flexRadioDefaultt"
+                           id="flexRadioDefaultt1"/>
+                </#if>
+                <label class="form-check-label" for="flexRadioDefaultt1">
+                    auf Initiative des Kunden
+                </label>
+            </div>
+            <div class="form-check mt-2">
+                <#if beratung.vermittlersInitiative>
+                    <input class="form-check-input" type="radio" name="flexRadioDefaultt"
+                           id="flexRadioDefaultt2" checked    />
+                <#else>
+                    <input class="form-check-input" type="radio"  name="flexRadioDefaultt"
+                           id="flexRadioDefaultt2"     />
+                </#if>
+                <label class="form-check-label" for="flexRadioDefaultt2">
+                    auf Initiative des Vermittlers
+                </label>
+            </div>
+            <div class="form-check mt-2">
+                <#if beratung.produktBezogen ==true>
+                    <input class="form-check-input" type="radio" name="flexRadioDefaultt"
+                           id="flexRadioDefaultt3"     checked />
+                <#else>
+                    <input class="form-check-input" type="radio"  name="flexRadioDefaultt"
+                           id="flexRadioDefaultt3"     />
+                </#if>
+                <label class="form-check-label" for="flexRadioDefaultt3"> Produkt bezogen </label>
+            </div>
+            <h5 class="mt-4 mb-4">Weitere Angaben zum Anlass der Beratung</h5>
+            <p>${beratung.anlassDerBeratung}</p>
+            <h5 class="mt-4 mb-4">
+                Folgende Bedürfnisse des Kunden wurden ermittelt
+            </h5>
+            <p>
+                ${beratung.bedurfnisseKunden}
+            </p>
+            <h5 class="mt-4 mb-4">
+                Folgende Wunsche des Kunden sollen berücksichtigt werden
+            </h5>
+            <p>${beratung.kundenWunsche}</p>
+            <h5 class="mt-4 mb-4">
+                Beratungsverlauf und Besonderheiten im Rahmen dieser Beratung
+            </h5>
+            <p>${beratung.beratungsVerlauf}</p>
+        </div>
+    </div>
+</section>
+<div class="pagebreak"></div>
+
+<section class="px-5 mb-5">
+    <div class="d-flex justify-content-between mb-5">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo"
+                alt="logo"
+                id="page-2-logo-img"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right"
+                alt="logo"
+                id="page-2-logo-img"
+                style="width: 116px; height: 30px"
+        />
+    </div>
+    <div class="max-width">
+        <div class="page4">
+            <h3 class="mt-5 mb-5">Wann und wo hat die Beratung stattgefunden?</h3>
+            <#list beratung.beratungGefundens as singleBeratungGefunden>
+                <div class="box px-3 pt-3 w-100 mb-4">
+                    <h6>Zeitpunkt der Beratung</h6>
+                    <p>${singleBeratungGefunden.zeitpunkt}</p>
+                    <h6 class="mt-3 mb-2">Ort der Beratung</h6>
+                    <p>${singleBeratungGefunden.ort}</p>
+                    <h6 class="mt-3">Gesprächspartner</h6>
+                    <p>${singleBeratungGefunden.gesprachsPartner}</p>
+                </div>
+            </#list>
+            <h3 class="mt-3 mb-3">Umfang der Beratung</h3>
+            <h5>Die Beratung umfasste die Bereiche:</h5>
+            <div class="mt-3">
+                <label>
+                    <#if beratung.absicherungVonHinterbliebenen>
+                        <input class="me-2" type="checkbox" checked/>
+                    <#else>
+                        <input class="me-2" type="checkbox" />
+                    </#if>
+                    Absicherung von Hinterbliebenen
+                </label>
+            </div>
+            <div>
+                <label>
+                    <#if beratung.absicherungDerArbeitskraft>
+                        <input class="me-2" type="checkbox" checked/>
+                    <#else>
+                        <input class="me-2" type="checkbox" />
+                    </#if>
+                    Absicherung der Arbeitskraft
+                </label>
+            </div>
+            <h3 class="mt-3 mb-3">Umfang der Beratung</h3>
+            <div class="form-check mt-2">
+                <#if beratung.keinVorvertrag>
+                    <input
+                            class="form-check-input"
+                            type="radio"
+                            name="umfang"
+                            id="umfang1"
+                            checked
+                    />
+                <#else>
+                    <input
+                            class="form-check-input"
+                            type="radio"
+                            name="umfang"
+                            id="umfang1"
+                    />
+                </#if>
+                <label class="form-check-label" for="umfang1">
+                    Es besteht kein Vorvertrag für das abzusichernde Risiko
+                </label>
+            </div>
+            <div class="form-check mt-2">
+                <#if beratung.leistungsumfangBerucksichtigt>
+                    <input
+                            class="form-check-input"
+                            type="radio"
+                            name="umfang"
+                            id="umfang2"
+                            checked
+                    />
+                <#else>
+                    <input
+                            class="form-check-input"
+                            type="radio"
+                            name="umfang"
+                            id="umfang2"
+                    />
+                </#if>
+                <label class="form-check-label" for="umfang2">
+                    Leistungsumfang des Vorvertrags wurde berücksichtigt
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="pagebreak"></div>
+<section class="px-5 mb-5">
+    <div class="d-flex justify-content-between mb-5">
+        <img
+                src="https://res.cloudinary.com/dlwk3jf73/image/upload/dri0mtvkhshm8w6xbagg"
+                class="page-logo"
+                alt="logo"
+                id="page-2-logo-img"
+        />
+        <img
+                src="https://res.cloudinary.com/dnbdpdm5n/image/upload/e_improve:outdoor/alx6fsenrjsufzclurlf.jpg"
+                class="page-logo-right"
+                alt="logo"
+                id="page-2-logo-img"
+                style="width: 116px; height: 30px"
+        />
+    </div>
+    <div class="max-width">
+        <div class="page5">
+            <h3 style="color: #09b6a7" class="mt-4 mb-4">Rat und Begründung</h3>
+            <h4>Empfehlung des Vermittlers</h4>
+            <div class="form-check mt-4">
+                <#if ratUndBegrundung.empfehlung.topSchutz>
+                <input class="form-check-input" type="radio" name="ag" id="ag1" checked />
+                <#else>
+                <input class="form-check-input" type="radio" name="ag" id="ag1" />
+                </#if>
+                <label class="form-check-label" for="ag1">
+                    Allianz Lebensversicherung AG | TopSchutz
+                </label>
+            </div>
+            <div class="form-check mt-1">
+                <#if ratUndBegrundung.empfehlung.riskVario>
+                <input class="form-check-input" type="radio" name="ag" id="ag2" checked />
+                <#else>
+                <input class="form-check-input" type="radio" name="ag" id="ag2" />
+                </#if>
+                <label class="form-check-label" for="ag2">
+                    Dialog Lebensversicherungs-AG | Risk-vario Basic
+                </label>
+            </div>
+            <div class="form-check mt-1">
+                <#if ratUndBegrundung.empfehlung.risiko>
+                <input class="form-check-input" type="radio" name="ag" id="ag3" checked />
+                <#else>
+                <input class="form-check-input" type="radio" name="ag" id="ag3" />
+                </#if>
+                <label class="form-check-label" for="ag3">
+                    Europa Lebensversicherung AG | Risiko E-RL
+                </label>
+            </div>
+            <h4 class="mt-4 mb-4">Begründung</h4>
+            <p>
+                ${ratUndBegrundung.begrundung}
+            </p>
+            <h4>Kundenentscheidung</h4>
+            <div class="form-check mt-4">
+                <#if ratUndBegrundung.kundScheidung>
+                    <input
+                            class="form-check-input"
+                            type="radio"
+                            name="JaNein"
+                            id="ja"
+                            checked
+                    />
+                <#else>
+                    <input
+                            class="form-check-input"
+                            type="radio"
+                            name="JaNein"
+                            id="ja"
+                    />
+                </#if>
+                <label class="form-check-label" for="ja"> Ja </label>
+            </div>
+            <div class="form-check mt-1">
+                <input
+                        class="form-check-input"
+                        type="radio"
+                        name="JaNein"
+                        id="nein"
+                />
+                <label class="form-check-label" for="nein"> Nein </label>
+            </div>
+            <h3 class="mt-4 mb-4">Anlagen zu dieser Beratungsdokumentation</h3>
+            <h6>Folgende Anlagen sind Bestandteil der Beratungsdokumentation</h6>
+            <div class="mt-3">
+                <label>
+                <#if ratUndBegrundung.vorschlag>
+                <input class="me-2" type="checkbox" checked />
+                <#else>
+                <input class="me-2" type="checkbox" />
+                </#if>
+                    Produktvorschlag mit detaillierten Produktvergleich
+                </label>
+            </div>
+            <div class="mt-1">
+                <label>
+                    <#if ratUndBegrundung.dokumente>
+                    <input class="me-2" type="checkbox" checked />
+                    <#else>
+                    <input class="me-2" type="checkbox" />
+                    </#if>
+                    VVG – Dokumente der oben genannten Versicherer | Produkte
+                </label>
+            </div>
+
+            <div style="margin-top: 55px" class="d-flex gap-3">
+                <div class="box w-100">
+                    <p>${ratUndBegrundung.musterstadt}</p>
+                    <div class="w-100 p-5">signature</div>
+                    <p class="mt-3">Unterschrift Kunde/Kundin</p>
+                </div>
+                <div class="box w-100">
+                    <p>Musterstadt 15.10.2023</p>
+                    <div class="w-100 p-5">signature</div>
+                    <p class="mt-3">Unterschrift Vermittler/in</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html> 
+<!-- HTML TEMPLATE 2 ENDS -->
